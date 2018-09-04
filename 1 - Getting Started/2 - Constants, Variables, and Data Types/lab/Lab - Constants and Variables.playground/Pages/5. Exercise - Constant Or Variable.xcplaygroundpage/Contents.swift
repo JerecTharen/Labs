@@ -10,7 +10,11 @@
  
  For each of the metrics above, declare either a constant or a variable and assign it a value corresponding to a hypothetical post. Be sure to use proper naming conventions.
  */
-
+var numberOfLikes = 13
+var numberOfComments = 3
+let yearPostWasCreated = 2018
+let monthPostWasCreated = 8
+let dayPostWasCreated = 31
 
 
 

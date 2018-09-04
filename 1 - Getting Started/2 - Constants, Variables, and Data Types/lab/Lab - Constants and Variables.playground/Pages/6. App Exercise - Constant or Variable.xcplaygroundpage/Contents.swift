@@ -12,6 +12,11 @@
  - Average heart rate: The user's average heart rate over the last 24 hours
  */
 
+let name = "RobbieRotten"
+let age = 41
+var numberOfStepsTakenToday = 6
+var goal = 7
+var averageHeartRate = 9
 
 
 
