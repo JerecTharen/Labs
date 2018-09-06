@@ -9,22 +9,22 @@
  
  Call the function a number of times, passing in different values of `steps` and `goal`. Observe the printouts and make sure what is printed to the console is what you would expect for the parameters passsed in.
  */
-
-let steps: Double = 0
+var steps: Double = 4
 let goal: Double = 10000
+let percent: Double = (steps / goal)
 func progressUpdate() {
-    if steps <= 0.1 {
+    if percent <= 0.1 {
         print("how are you running, you have no legs?!")
     }
-    if steps == 0.5 {
+    else if percent == 0.5 {
         print("Halfway there")
     }
-    if steps >= 0.9 {
+    else if percent >= 0.9 {
         print("mans running with no legs?!")
     }
     
 }
 
-
+progressUpdate()
 
 //: [Previous](@previous)  |  page 4 of 6  |  [Next: Exercise - Return Values](@next)

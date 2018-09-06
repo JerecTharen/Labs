@@ -16,6 +16,6 @@ func magicEightBall(kek number: Int) {
    
 }
 
-print()
+magicEightBall(kek: 3)
 //: page 1 of 6  |  [Next: App Exercise - A Functioning App](@next)
-)
+
