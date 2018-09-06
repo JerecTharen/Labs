@@ -9,11 +9,11 @@ let storedUserName = "TheFittest11"
 let storedPassword = "a8H1LuK91"
 let enteredUserName = "thefittest11"
 let enteredPassword: String = "a8H1Luk9"
-if storedPassword != enteredPassword || storedUserName != enteredUserName{
+if storedPassword != enteredPassword || storedUserName != enteredUserName {
     print("please check your username and password")
 
 }
-else if storedPassword == enteredPassword && storedUserName == enteredUserName{
+else if storedPassword == enteredPassword && storedUserName == enteredUserName {
     print("you are logged in!")
 }
 
