@@ -6,7 +6,15 @@
 struct Rectangle {
     var width: Int
     var height: Int
+    var area: Int
+    init(area: Int) {
+        self.area = area
+        var area = width * height
+        
+    }
+    
 }
+var rectangle =
 /*:
  In the `Height` struct below, height is represented in both inches and centimeters. However, if `heightInInches` is changed, `heightInCentimeters` should also adjust to match it. Add a `didSet` to each property that will check if the other property is what it should be, and if not, sets the proper value. If you set the value of the other property even though it already has the right value, you will end up with an infinite loop of each property setting the other.
  
