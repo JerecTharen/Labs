@@ -5,12 +5,27 @@
  
  Create a `Spaceship` class with three variable properties: `name`, `health`, and `position`. The default value of `name` should be an empty string and `health` should be 0. `position` will be represented by an `Int` where negative numbers place the ship further to the left and positive numbers place the ship further to the right. The default value of `position` should be 0.
  */
-
+class SpaceShip {
+    var name: String
+    var health: Int = 0
+    var position: Double = 0.0
+    init(name: String) {
+        self.name = name
+    }
+    func moveRight() {
+        let moveRight = position + 1
+        print(moveRight)
+    }
+    func moveLeft() {
+        let moveLeft = position - 1
+        print(moveLeft)
+    }
+   }
 
 /*:
  Create a `let` constant called `falcon` and assign it to an instance of `Spaceship`. After initialization, set `name` to "Falcon".
  */
-
+let falcon = SpaceShip(name: "falconLuch")
 
 /*:
  Go back and add a method called `moveLeft()` to the definition of `Spaceship`. This method should adjust the position of the spaceship to the left by one. Add a similar method called `moveRight()` that moves the spaceship to the right. Once these methods exist, use them to move `falcon` to the left twice and to the right once. Print the new position of `falcon` after each change in position.
