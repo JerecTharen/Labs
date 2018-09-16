@@ -48,7 +48,7 @@ class ShieldSpaceShip: Fighter {
     }
 }
 class Defender: ShieldSpaceShip {
-    var cannon = ""
+    var cannon = "" 
 }
     let defender = Defender()
 defender.moveRight()
