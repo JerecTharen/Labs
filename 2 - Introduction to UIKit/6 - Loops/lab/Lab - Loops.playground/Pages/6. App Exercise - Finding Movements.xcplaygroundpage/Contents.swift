@@ -11,8 +11,24 @@
 let lowHR = 110
 let highHR = 125
 var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimming": 130, "Cycling": 128, "Skiing": 114, "Climbing": 129]
+var currentActivity = Array(movementHeartRates.keys)
+var currentHR = Array(movementHeartRates.values)
+for(currentActivity, var currentHR) in movementHeartRates {
+    if currentHR = lowHR {
+        print("bob")
+        
+    }
+    else {
+        
+    }
+    
+}
 
-
+// for number in numbers {
+//if number % 2 == 0 {
+//print(number)
+//}
+//}
 /*:
  
  _Copyright © 2017 Apple Inc._

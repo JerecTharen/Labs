@@ -20,13 +20,13 @@ print(registration)
 /*:
  Use the `insert(_:at:)` method to add `Charlie` into the array as the second element. Print the contents of the collection.
  */
-registration.insert("Charlie", at: 0)
+registration.insert("Charlie", at: 1)
 print(registration)
 
 /*:
  Someone had a conflict and decided to transfer her registration to someone else. Use array subscripting to change the sixth element to `Rebecca`. Print the contents of the collection.
  */
-registration.insert("Rebecca", at: 6)
+registration.insert("Rebecca", at: 5)
 print(registration)
 
 /*:
