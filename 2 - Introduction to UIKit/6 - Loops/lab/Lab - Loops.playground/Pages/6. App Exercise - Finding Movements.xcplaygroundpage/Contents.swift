@@ -14,11 +14,12 @@ var movementHeartRates: [String: Int] = ["Walking": 85, "Running": 120, "Swimmin
 var currentActivity = Array(movementHeartRates.keys)
 var currentHR = Array(movementHeartRates.values)
 for(currentActivity, var currentHR) in movementHeartRates {
-    if currentHR = lowHR {
+    if currentHR <= lowHR || currentHR >= highHR {
         print("bob")
         
     }
     else {
+        print("keep at it")
         
     }
     
