@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var coolTextField: UITextField!
-    
     @IBOutlet weak var coolButton: UIButton!
     @IBOutlet weak var coolLabel: UILabel!
     @IBOutlet weak var coolSwitch: UISwitch!
