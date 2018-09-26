@@ -11,7 +11,7 @@ var userInputAge: Int = 34
 var userAge: Int? = nil
 userAge = Int(userInputAge)
 // cannot convert value type
-print(userAge)
+print(userAge!)
 
 /*:
  Go back and change the type of `userAge` to `Int?`, and print the value of `userAge`. Why is `userAge`'s value `nil`? Provide your answer in a comment or print statement below.
