@@ -10,6 +10,20 @@ import UIKit
  
  Write a failable initializer that takes parameters for your start and end times, and then checks to see if they are greater than 10 seconds apart using a guard statement. If they are, your initializer should fail. Otherwise, the initializer should set the properties accordingly.
  */
+struct Workout {
+    var startTime: Double
+    var endTime: Double
+    
+    func buff4Me(startTime: Double, endTime: Double) -> Double? {
+        guard startTime < endTime + 10, endTime > startTime + 10 else {return nil}
+        let timeDif = endTime - startTime
+        print(timeDif)
+        return timeDif
+    }
+}
+let workout = Workout(startTime: 2000, endTime: 20000)
+workout.buff4Me(startTime: 20000, endTime: 34000)
+workout.buff4Me(startTime: 2000, endTime: 2000)
 
 
 /*:
@@ -20,6 +34,12 @@ import UIKit
 struct Food {
     var name: String
     var calories: Int
+    
+    func logFood() -> Any? {
+        guard let foodTextField2 = foodTextField.text, let caloriesTextField2 = caloriesTextField.text else { return nil }
+        print("Jimmy son")
+        return "Jim jam"
+    }
 }
 
 let foodTextField = UITextField()
