@@ -25,8 +25,17 @@ struct Workout {
 /*:
  Try to initialize two instances of a `Workout` object and print each of them. One of them should not be initialized because the start and end times are too close together. The other should successfully initialize a `Workout` object.
  */
+let loserWorkout = Workout(startTime: 10_000, endTime: 10_002)
+if let tempWorkout = loserWorkout {
+    print(tempWorkout.startTime)
+    print(tempWorkout.endTime)
+}
 
-
+let winnerWorkout = Workout(startTime: 10_000, endTime: 12_000)
+if let tempWorkout2 = winnerWorkout {
+    print(tempWorkout2.startTime)
+    print(tempWorkout2.endTime)
+}
 /*:
  
  _Copyright © 2017 Apple Inc._
