@@ -16,8 +16,8 @@ struct User {
         if name != name || stepsToday != stepsToday {
             return nil
         } else {
-            self.name = name
-            self.stepsToday = stepsToday
+            self.name = name!
+            self.stepsToday = stepsToday!
         }
     }
 }
