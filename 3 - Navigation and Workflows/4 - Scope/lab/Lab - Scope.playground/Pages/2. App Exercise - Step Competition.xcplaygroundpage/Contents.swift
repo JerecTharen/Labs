@@ -13,11 +13,11 @@ struct User {
         self.stepsToday = stepsToday
     }
     init?(name: String?, stepsToday: Int?) {
-        if name != name || stepsToday != stepsToday {
+        if let name = name, let stepsToday = stepsToday {
+            self.name = name
+            self.stepsToday = stepsToday
+            } else {
             return nil
-        } else {
-            self.name = name!
-            self.stepsToday = stepsToday!
         }
     }
 }
