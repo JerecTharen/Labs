@@ -13,10 +13,9 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         
      let info = "you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!you will never find my lucky charms!"
+        
+        for child in self.children where child is InfoViewController {
+            (child as! InfoViewController).setInfo(with: info)
+        }
     }
-    
-    
-    
-    
-    
 }

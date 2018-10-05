@@ -13,6 +13,7 @@ class InfoViewController: UIViewController {
     @IBOutlet private var infoLabel: UILabel!
     
     func setInfo(with info: String) {
+        self.loadViewIfNeeded()
         self.infoLabel.text = info
     }
 }
