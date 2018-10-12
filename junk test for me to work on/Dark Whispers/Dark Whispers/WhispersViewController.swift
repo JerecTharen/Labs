@@ -20,6 +20,7 @@ class WhispersViewController: UIViewController {
        
         var soundTimer: Timer!
         soundTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getT1), userInfo: nil, repeats: true)
+        var whisper: AVAudioPlayer?
         
         
                 // Do any additional setup after loading the view.
@@ -31,14 +32,63 @@ class WhispersViewController: UIViewController {
         switch randomGod {
         case 0:
             RandomOldGod.image = UIImage(named: "Cthun")
+            let path = Bundle.main.path(forResource: "ghost.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                whisper = try AVAudioPlayer(contentsOf: url)
+                whisper?.play()
+            } catch {
+                // couldn't load file :(
+            }
         case 1:
             RandomOldGod.image = UIImage(named: "Yoggsaron")
+            let path = Bundle.main.path(forResource: "evilLaugh.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                whisper = try AVAudioPlayer(contentsOf: url)
+                whisper?.play()
+            } catch {
+                // couldn't load file :(
+            }
+            
         case 2:
             RandomOldGod.image = UIImage(named: "Yshaarj")
+            let path = Bundle.main.path(forResource: "beatingHeart.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                whisper = try AVAudioPlayer(contentsOf: url)
+                whisper?.play()
+            } catch {
+                // couldn't load file :(
+            }
+            
         case 3:
             RandomOldGod.image = UIImage(named: "Nzoth")
+            let path = Bundle.main.path(forResource: "churchBell.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                whisper = try AVAudioPlayer(contentsOf: url)
+                whisper?.play()
+            } catch {
+                // couldn't load file :(
+            }
+            
         case 4:
             RandomOldGod.image = UIImage(named: "OldGodTree")
+            let path = Bundle.main.path(forResource: "naviHey.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                whisper = try AVAudioPlayer(contentsOf: url)
+                whisper?.play()
+            } catch {
+                // couldn't load file :(
+            }
+            
         default:
             RandomOldGod.image = UIImage(named: "OldGodHeart")
             
