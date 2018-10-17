@@ -25,21 +25,15 @@ let workout = Workout(startTime: 2000, endTime: 20000)
 workout.buff4Me(startTime: 20000, endTime: 34000)
 workout.buff4Me(startTime: 2000, endTime: 2000)
 
-
 /*:
  Imagine a screen where a user inputs a meal that they've eaten. If the user taps a "save" button without adding any food, you might want to prompt the user that they haven't actually added anything.
  
  Using the `Food` struct and the text fields provided below, create a function called `logFood` that takes no parameters and returns an optional `Food` object. Inside the body of the function, use a guard statement to unwrap the `text` property of `foodTextField` and `caloriesTextField`. In addition to unwrapping `caloriesTextField`, you'll need to create and unwrap a new variable that initializes an `Int` from the text in `caloriesTextField`. If any of this fails, return `nil`. After the guard statement, create and return a `Food` object.
  */
+
 struct Food {
     var name: String
     var calories: Int
-    
-    func logFood() -> Any? {
-        guard let foodTextField2 = foodTextField.text, let caloriesTextField2 = caloriesTextField.text else { return nil }
-        print("Jimmy son")
-        return "Jim jam"
-    }
 }
 
 let foodTextField = UITextField()
@@ -47,12 +41,16 @@ let caloriesTextField = UITextField()
 
 foodTextField.text = "Banana"
 caloriesTextField.text = "23"
-
-
+func logFood() -> Food? {
+    guard let unwrappedFoodTextField = foodTextField.text, let unwrappedCaloriesTextField = (caloriesTextField.text), let intUnwrappedCaloriesTextField = Int(unwrappedCaloriesTextField) else {return nil}
+    return Food(name: unwrappedFoodTextField, calories: intUnwrappedCaloriesTextField)
+}
 /*:
  Call the function you made above and capture the return value. Unwrap the `Food` object with standard optional binding and print a statement about the food using each of its properties. Go back and change the text in `caloriesTextField` to a string that cannot be converted into a number. What happens in that case?
  */
-
+if let myFood = logFood() {
+    print("You ate \(myFood.name) and it had \(myFood.calories) calories in it.")
+}
 
 /*:
  
