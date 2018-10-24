@@ -80,15 +80,15 @@
             </objects>
             <point key="canvasLocation" x="142" y="-54"/>
         </scene>
-        <!--View Controller-->
+        <!--Question View Controller-->
         <scene sceneID="SW2-fa-3Mo">
             <objects>
-                <viewController id="fW2-lp-oHC" sceneMemberID="viewController">
+                <viewController id="fW2-lp-oHC" customClass="QuestionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PZS-62-FI8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-BW-nKc">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l1r-BW-nKc" userLabel="Single Answer Stack">
                                 <rect key="frame" x="16" y="243.5" width="46" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvE-y6-u48">
@@ -109,7 +109,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eNB-U1-Sx0">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eNB-U1-Sx0" userLabel="Multiple Answer Stack">
                                 <rect key="frame" x="0.0" y="216.5" width="359" height="234"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="tpq-yO-j04">
@@ -174,7 +174,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-Fg-p8b">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-Fg-p8b" userLabel="Ranged Answer Stack">
                                 <rect key="frame" x="16" y="273.5" width="343" height="120.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vJB-5m-ESE">
@@ -240,6 +240,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="8lk-AB-3fF"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="eNB-U1-Sx0" id="fJl-hO-D2E"/>
+                        <outlet property="rangedStackView" destination="ZBh-Fg-p8b" id="AOq-JO-Ufh"/>
+                        <outlet property="singleStackView" destination="l1r-BW-nKc" id="dzS-Br-kyT"/>
                         <segue destination="raT-fO-SVa" kind="show" id="6WR-lR-H9s"/>
                     </connections>
                 </viewController>
@@ -250,7 +253,7 @@
         <!--Title-->
         <scene sceneID="NCa-yw-7L8">
             <objects>
-                <viewController id="raT-fO-SVa" sceneMemberID="viewController">
+                <viewController id="raT-fO-SVa" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JoF-9a-1UK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
