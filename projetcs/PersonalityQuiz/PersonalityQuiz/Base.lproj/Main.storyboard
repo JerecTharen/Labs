@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introducrion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroducrionViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIe-Dm-X2T">
                                         <rect key="frame" x="0.0" y="36" width="283.5" height="30"/>
                                         <state key="normal" title="Begin Personality Quiz"/>
+                                        <connections>
+                                            <action selector="startQuizPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HO4-L9-52g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -73,7 +76,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="E3I-W6-GXL" kind="show" id="og7-0D-qhw"/>
+                        <segue destination="E3I-W6-GXL" kind="show" identifier="startQuiz" id="og7-0D-qhw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -231,12 +234,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="CuT-M8-1PM" secondAttribute="trailing" id="yyn-ax-Caz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Mu-d7-YHa"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="l1r-BW-nKc"/>
-                                <exclude reference="eNB-U1-Sx0"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="8lk-AB-3fF"/>
                     <connections>

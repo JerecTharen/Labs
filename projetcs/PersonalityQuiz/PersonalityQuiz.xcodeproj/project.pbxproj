@@ -16,7 +16,7 @@
 		CBB9B0AE2174D59D00E78956 /* PersonalityQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB9B0AD2174D59D00E78956 /* PersonalityQuizUITests.swift */; };
 		CBD3F09D217F82D5000C1357 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F09C217F82D5000C1357 /* QuestionViewController.swift */; };
 		CBD3F09F217F8317000C1357 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F09E217F8317000C1357 /* ResultsViewController.swift */; };
-		CBD3F0A72180C6FC000C1357 /* QuestionsData.Swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F0A62180C6FC000C1357 /* QuestionsData.Swift */; };
+		CBD3F0A92180D19C000C1357 /* QuestionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F0A82180D19C000C1357 /* QuestionsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		CBB9B0AF2174D59D00E78956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD3F09C217F82D5000C1357 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		CBD3F09E217F8317000C1357 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		CBD3F0A62180C6FC000C1357 /* QuestionsData.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsData.Swift; sourceTree = "<group>"; };
+		CBD3F0A82180D19C000C1357 /* QuestionsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsData.swift; path = ../QuestionsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +103,9 @@
 		CBB9B08C2174D59A00E78956 /* PersonalityQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				CBD3F0A82180D19C000C1357 /* QuestionsData.swift */,
 				CBB9B08D2174D59A00E78956 /* AppDelegate.swift */,
 				CBB9B08F2174D59A00E78956 /* IntroductionViewController.swift */,
-				CBD3F0A62180C6FC000C1357 /* QuestionsData.Swift */,
 				CBD3F09C217F82D5000C1357 /* QuestionViewController.swift */,
 				CBD3F09E217F8317000C1357 /* ResultsViewController.swift */,
 				CBB9B0912174D59A00E78956 /* Main.storyboard */,
@@ -265,10 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBD3F0A72180C6FC000C1357 /* QuestionsData.Swift in Sources */,
 				CBB9B0902174D59A00E78956 /* IntroductionViewController.swift in Sources */,
 				CBB9B08E2174D59A00E78956 /* AppDelegate.swift in Sources */,
 				CBD3F09D217F82D5000C1357 /* QuestionViewController.swift in Sources */,
+				CBD3F0A92180D19C000C1357 /* QuestionsData.swift in Sources */,
 				CBD3F09F217F8317000C1357 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
