@@ -13,6 +13,7 @@
 		A94375B81E4648230053B419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94375B61E4648230053B419 /* LaunchScreen.storyboard */; };
 		A9FE274F1E4A8F0E00F01A14 /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FE274E1E4A8F0E00F01A14 /* AthleteTableViewController.swift */; };
 		CBD3F0A12180AD92000C1357 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F0A02180AD92000C1357 /* Athlete.swift */; };
+		CBD3F0A52180AFB9000C1357 /* AthleteFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F0A42180AFB9000C1357 /* AthleteFromViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A94375B91E4648230053B419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9FE274E1E4A8F0E00F01A14 /* AthleteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
 		CBD3F0A02180AD92000C1357 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		CBD3F0A42180AFB9000C1357 /* AthleteFromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AthleteFromViewController.swift; path = ../AthleteFromViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A94375AC1E4648230053B419 /* FavoriteAthlete */ = {
 			isa = PBXGroup;
 			children = (
+				CBD3F0A42180AFB9000C1357 /* AthleteFromViewController.swift */,
 				A94375AD1E4648230053B419 /* AppDelegate.swift */,
 				A94375B11E4648230053B419 /* Main.storyboard */,
 				CBD3F0A02180AD92000C1357 /* Athlete.swift */,
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD3F0A52180AFB9000C1357 /* AthleteFromViewController.swift in Sources */,
 				A9FE274F1E4A8F0E00F01A14 /* AthleteTableViewController.swift in Sources */,
 				CBD3F0A12180AD92000C1357 /* Athlete.swift in Sources */,
 				A94375AE1E4648230053B419 /* AppDelegate.swift in Sources */,
