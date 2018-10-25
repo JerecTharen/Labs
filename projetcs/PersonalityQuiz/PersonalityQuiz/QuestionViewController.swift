@@ -26,6 +26,12 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var multiLabel3: UILabel!
     @IBOutlet weak var multiLabel4: UILabel!
     
+    @IBOutlet weak var multiSwitch1: UISwitch!
+    @IBOutlet weak var multiSwitch2: UISwitch!
+    @IBOutlet weak var multiSwitch3: UISwitch!
+    @IBOutlet weak var multiSwitch4: UISwitch!
+    
+    
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
@@ -125,6 +131,23 @@ class QuestionViewController: UIViewController {
             answersChosen.append(currentAnswers[3])
         default:
             break
+        }
+        nextQuestion()
+    }
+    @IBAction func multipleAnswerButtonPressed() {
+        let currentAnswer = questions[questionIndex].answers
+        
+        if multiSwitch1.isOn {
+            answersChosen.append(currentAnswer[0])
+        }
+        if multiSwitch2.isOn {
+            answersChosen.append(currentAnswer[1])
+        }
+        if multiSwitch3.isOn {
+            answersChosen.append(currentAnswer[2])
+        }
+        if multiSwitch4.isOn {
+            answersChosen.append(currentAnswer[3])
         }
         nextQuestion()
     }

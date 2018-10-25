@@ -186,6 +186,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-DT-5nq">
                                         <rect key="frame" x="0.0" y="204" width="359" height="30"/>
                                         <state key="normal" title="Sumbit Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="fW2-lp-oHC" eventType="touchUpInside" id="spM-xE-g36"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -253,6 +256,10 @@
                         <outlet property="multiLabel2" destination="RSh-Rk-MXB" id="sTf-mj-jFB"/>
                         <outlet property="multiLabel3" destination="YT3-vv-ugO" id="SKL-cP-3FQ"/>
                         <outlet property="multiLabel4" destination="xlP-nl-g5u" id="WaG-Cx-v6t"/>
+                        <outlet property="multiSwitch1" destination="agq-41-kkj" id="9bq-wa-HpG"/>
+                        <outlet property="multiSwitch2" destination="xaY-r9-i6j" id="WMM-OG-y92"/>
+                        <outlet property="multiSwitch3" destination="WiS-cd-W7F" id="FvC-eY-9hC"/>
+                        <outlet property="multiSwitch4" destination="PDD-ZZ-Es5" id="5Jn-mO-guu"/>
                         <outlet property="multipleStackView" destination="eNB-U1-Sx0" id="fJl-hO-D2E"/>
                         <outlet property="questionLabel" destination="EAd-qY-fcj" id="es8-PG-YsY"/>
                         <outlet property="questionProgressView" destination="CuT-M8-1PM" id="9AJ-sm-Xe3"/>
