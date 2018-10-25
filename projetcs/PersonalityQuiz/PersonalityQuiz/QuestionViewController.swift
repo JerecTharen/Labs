@@ -36,6 +36,9 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var rangedLabel1: UILabel!
     @IBOutlet weak var rangedLabel2: UILabel!
     
+    @IBOutlet weak var rangedSlider: UISlider!
+    
+    
     @IBOutlet weak var questionProgressView: UIProgressView!
     
     
@@ -149,6 +152,12 @@ class QuestionViewController: UIViewController {
         if multiSwitch4.isOn {
             answersChosen.append(currentAnswer[3])
         }
+        nextQuestion()
+    }
+    @IBAction func rangedAnswerButtonPressed() {
+        let currentAnswer = questions[questionIndex].answers
+        let index = Int(round(rangedSlider.value * Float(currentAnswer.count - 1)))
+        answersChosen.append(currentAnswer[index])
         nextQuestion()
     }
     
