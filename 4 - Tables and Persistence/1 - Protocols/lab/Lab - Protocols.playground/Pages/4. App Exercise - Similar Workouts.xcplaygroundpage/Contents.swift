@@ -19,35 +19,20 @@ func simpleWorkoutDescription(workout: Workout) {
    print("You went \(workout.distance) meters in \(workout.time) seconds.")
 }
 struct RunningWorkOut: Workout {
-    var distance: Double {
-       return 6.6
-    }
-    
-    var time: Double {
-        return 4.7
-    }
-    
-    func simpleWorkoutDescription(workout: Workout) {
-        print("You went \(workout.distance) meters in \(workout.time) seconds.")
+    var distance: Double
+       var time: Double
     }
 
+struct SwimmingWorkout: Workout {
+    var distance: Double
+    var time: Double
     
 }
 
-struct SwimingWorkout: Workout {
-    var distance: Double {
-        return 1.3
-    }
-    
-    var time: Double {
-        return 0.7
-    }
-    
-    func simpleWorkoutDescription(workout: Workout) {
-        print("You went \(workout.distance) meters in \(workout.time) seconds.")
-    }
+var runningWorkout = RunningWorkOut(distance: 232, time: 232)
+var swimmingWorkout = SwimmingWorkout(distance: 232.22, time: 2.33)
 
-    
-}
+simpleWorkoutDescription(workout: runningWorkout)
+simpleWorkoutDescription(workout: swimmingWorkout)
 
 //: [Previous](@previous)  |  page 4 of 5  |  [Next: App Exercise - Heart Rate Delegate](@next)
