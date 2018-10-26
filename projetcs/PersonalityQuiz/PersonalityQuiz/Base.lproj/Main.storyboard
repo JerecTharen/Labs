@@ -275,7 +275,7 @@
                         <outlet property="singleButton3" destination="W29-dX-vca" id="Jkl-5l-nMr"/>
                         <outlet property="singleButton4" destination="Cmk-Fv-3Zq" id="Q1Y-Vc-BSx"/>
                         <outlet property="singleStackView" destination="l1r-BW-nKc" id="dzS-Br-kyT"/>
-                        <segue destination="raT-fO-SVa" kind="show" id="6WR-lR-H9s"/>
+                        <segue destination="raT-fO-SVa" kind="show" identifier="ResultSegue" id="6WR-lR-H9s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOh-Cv-oCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,10 +317,19 @@
                         <viewLayoutGuide key="safeArea" id="3g3-HI-vgw"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Xue-hU-BCE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uza-Lu-F20"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="uza-Lu-F20">
+                            <connections>
+                                <segue destination="d58-KL-6hw" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="wWu-Eo-cZ3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="cjd-d7-R10" id="2Mh-hf-QGQ"/>
+                        <outlet property="resultDefenitionLabel" destination="MDn-0h-7lN" id="Yws-u8-3Av"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5de-7K-jkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="d58-KL-6hw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2246" y="-54"/>
         </scene>
