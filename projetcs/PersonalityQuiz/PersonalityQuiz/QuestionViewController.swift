@@ -52,14 +52,14 @@ class QuestionViewController: UIViewController {
     var answersChosen: [Answer] = []
     
     var questions: [Question] = [
-        Question(text: "Which food do you enjoy the most?", type: .single, answers: [
+        Question(text: "Which food do you enjoy the most?", type: .single,
+                 answers: [
             Answer(text: "Steak", type: .dog),
             Answer(text: "Fish", type: .cat),
             Answer(text: "Carrots", type: .rabbit),
             Answer(text: "Corn", type: .turtle)
             ]),
-        Question(text: "Which activities do you enjoy?",
-                 type: .multiple,
+        Question(text: "Which activities do you enjoy?", type: .multiple,
                  answers: [
                     Answer(text: "Swimming", type: .turtle),
                     Answer(text: "Sleeping", type: .cat),
@@ -67,8 +67,7 @@ class QuestionViewController: UIViewController {
                     Answer(text: "Eating", type: .dog)
             ]),
         
-        Question(text: "How much do you enjoy car rides?",
-                 type: .ranged,
+        Question(text: "How much do you enjoy car rides?", type: .ranged,
                  answers: [
                     Answer(text: "I dislike them", type: .cat),
                     Answer(text: "I get a little nervous",type: .rabbit),
