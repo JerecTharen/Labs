@@ -16,39 +16,36 @@ class FoodTableViewController: UITableViewController {
         Meal(name: "dinner", food: [Food(name: "soup", description: "liquid")])
         
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return meals.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return meals[section].food.count
-        
-
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
-
+        
         let meal = meals[IndexPath.section]
         let food = meals.food[IndexPath.row]
         
         cell.textLabel?.text = "\(meal.name) - \(meal.food)"
         cell.detailTextLabel?.text = food.description
-
+        
         return cell
     }
- 
+    
 
     /*
     // Override to support conditional editing of the table view.
