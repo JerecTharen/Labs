@@ -185,7 +185,7 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjT-DT-5nq">
                                         <rect key="frame" x="0.0" y="204" width="359" height="30"/>
-                                        <state key="normal" title="Sumbit Answer"/>
+                                        <state key="normal" title="Submit Answer"/>
                                         <connections>
                                             <action selector="multipleAnswerButtonPressed" destination="fW2-lp-oHC" eventType="touchUpInside" id="spM-xE-g36"/>
                                         </connections>
