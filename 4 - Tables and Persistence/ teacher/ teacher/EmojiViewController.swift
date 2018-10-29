@@ -57,14 +57,27 @@ class EmojiViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoji = emojis[indexPath.row]
+        print ("\(emoji.symbol) \(indexPath)")
+    }
+    
+  
+    
 
-    /*
+    
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    override func tableView(_ tableView: UITableView, MoveRowAt fromIndexPath: IndexPath, to: IndexPath) -> Bool {
+        
+        let movedEmoji = emojis.remove(at: fromIndexPath.row)
+        emojis.insert(movedEmoji, at: to.row)
+        tableView.reloadData()
         return true
     }
-    */
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        <#code#>
+}
+}
 
     /*
     // Override to support editing the table view.
@@ -91,7 +104,7 @@ class EmojiViewController: UITableViewController {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+ 
 
     /*
     // MARK: - Navigation
@@ -103,4 +116,6 @@ class EmojiViewController: UITableViewController {
     }
     */
 
-}
+
+ }
+ */
