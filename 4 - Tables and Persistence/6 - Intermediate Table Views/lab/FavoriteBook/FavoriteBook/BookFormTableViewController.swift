@@ -7,9 +7,8 @@
 
 import UIKit
 
+//outlets
 class BookFormTableViewController: UITableViewController {
-    
-    //outlets
     @IBOutlet weak var titleTextFieldOutlet: UITextField!
     @IBOutlet weak var authorTextFieldOutlet: UITextField!
     @IBOutlet weak var genreTextFieldOutlet: UITextField!
@@ -18,22 +17,26 @@ class BookFormTableViewController: UITableViewController {
     struct PropertyKeys {
         static let unwind = "UnwindToBookTable"
     }
+    
     var book: Book?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        func updateView() {
-            guard let book = book else {return}
-            
-            titleTextFieldOutlet.text = book.title
-            authorTextFieldOutlet.text = book.author
-            genreTextFieldOutlet.text = book.genre
-            lengthTextFieldOutlet.text = book.length
-        }
+        updateView()
 
     }
     
-    // actions
+    // func
+    func updateView() {
+        guard let book = book else {return}
+        
+        titleTextFieldOutlet.text = book.title
+        authorTextFieldOutlet.text = book.author
+        genreTextFieldOutlet.text = book.genre
+        lengthTextFieldOutlet.text = book.length
+    }
+
+// actions
     @IBAction func saveButton(_ sender: Any) {
     }
     
