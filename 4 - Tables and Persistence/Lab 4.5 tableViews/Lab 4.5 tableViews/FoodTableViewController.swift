@@ -38,7 +38,7 @@ class FoodTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
         
         let meal = meals[IndexPath.section]
-        let food = meals.food[IndexPath.row]
+        let food = meals[IndexPath.row]
         
         cell.textLabel?.text = "\(meal.name) - \(meal.food)"
         cell.detailTextLabel?.text = food.description
