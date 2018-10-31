@@ -15,6 +15,7 @@
 		2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */; };
 		2C5E3E341E514EA700C02C5F /* BookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */; };
 		CBD3F1E52188A95C000C1357 /* BookFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F1E42188A95C000C1357 /* BookFormTableViewController.swift */; };
+		CBD3F1E72188F3C2000C1357 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3F1E62188F3C2000C1357 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFormViewController.swift; sourceTree = "<group>"; };
 		2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewController.swift; sourceTree = "<group>"; };
 		CBD3F1E42188A95C000C1357 /* BookFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFormTableViewController.swift; sourceTree = "<group>"; };
+		CBD3F1E62188F3C2000C1357 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +63,13 @@
 			isa = PBXGroup;
 			children = (
 				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
-				2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */,
 				2C5E3E191E514CC400C02C5F /* AppDelegate.swift */,
 				2C5E3E2B1E514CE500C02C5F /* Book.swift */,
 				CBD3F1E42188A95C000C1357 /* BookFormTableViewController.swift */,
+				CBD3F1E62188F3C2000C1357 /* BookTableViewCell.swift */,
 				2C5E3E1D1E514CC400C02C5F /* Main.storyboard */,
 				2C5E3E201E514CC400C02C5F /* Assets.xcassets */,
+				2C5E3E2F1E514D3400C02C5F /* BookFormViewController.swift */,
 				2C5E3E221E514CC400C02C5F /* LaunchScreen.storyboard */,
 				2C5E3E251E514CC400C02C5F /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 				2C5E3E1A1E514CC400C02C5F /* AppDelegate.swift in Sources */,
 				CBD3F1E52188A95C000C1357 /* BookFormTableViewController.swift in Sources */,
 				2C5E3E301E514D3400C02C5F /* BookFormViewController.swift in Sources */,
+				CBD3F1E72188F3C2000C1357 /* BookTableViewCell.swift in Sources */,
 				2C5E3E2C1E514CE500C02C5F /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
