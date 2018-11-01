@@ -1,4 +1,3 @@
-
 import UIKit
 
 class BookTableViewController: UITableViewController {
@@ -18,7 +17,9 @@ class BookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
+        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,21 +29,13 @@ class BookTableViewController: UITableViewController {
     }
     
     
-    // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-        
-        }
-    }
-    
-    
+    // mark - table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.bookCell, for: indexPath) as! BookTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.bookCell, for: indexPath)
         
         let book = books[indexPath.row]
         cell.textLabel?.text = book.title
@@ -51,10 +44,9 @@ class BookTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Navigation
-    
+    // mark - navigation
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        guard let source = segue.source as? BookFormViewController,
+        guard let source = segue.source as? BookFormTableViewController,
             let book = source.book else {return}
         
         if let indexPath = tableView.indexPathForSelectedRow {
@@ -67,7 +59,7 @@ class BookTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let bookFormViewController = segue.destination as? BookFormViewController else {return}
+        guard let bookFormViewController = segue.destination as? BookFormTableViewController else {return}
         
         if let indexPath = tableView.indexPathForSelectedRow,
             segue.identifier == PropertyKeys.editBookSegue {
@@ -75,6 +67,11 @@ class BookTableViewController: UITableViewController {
         }
     }
     
-    
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            books.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+    }
 }
