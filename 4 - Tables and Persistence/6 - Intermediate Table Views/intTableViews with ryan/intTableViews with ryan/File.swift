@@ -11,3 +11,5 @@ struct Bio {
     let name: String
     let bio: String
 }
+
+// add persistance, allow it to when u click ona cell it populates teh detail view
