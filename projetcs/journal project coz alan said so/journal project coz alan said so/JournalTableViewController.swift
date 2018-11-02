@@ -28,19 +28,19 @@ class JournalTableViewController: UITableViewController {
     
     // func
         func updateView() {
-            guard let book = book else {return}
+            guard let journal = journal else {return}
             
-            journalDateTitleOutlet.text = book.title
-            journalTextViewOutlet.text = book.author
+            journalDateTitleOutlet.text = journal.date
+            journalTextViewOutlet.text = journal.entry
         }
         
         // actions
         
         @IBAction func saveButtonTapped(_ sender: Any) {
-            guard let title = journalEntryOutlet.text,
-                let author = journalTextViewOutlet.text, else {return}
+            guard let date = journalTextViewOutlet.text,
+                let entry = journalTextViewOutlet.text, else {return}
             
-            book = Book(title: title, author: author, genre: genre, length: length)
+            journal = Journal(date: date, entry: entry)
             performSegue(withIdentifier: PropertyKeys.unwind, sender: self)
         }
         

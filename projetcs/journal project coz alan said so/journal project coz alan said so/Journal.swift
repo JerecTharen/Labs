@@ -8,35 +8,37 @@
 
 import Foundation
 
-class Book: NSObject, NSCoding {
+class Journal: NSObject, NSCoding {
+    func encode(with aCoder: NSCoder) {
+        <#code#>
+    }
+    
     
     struct PropertyKeys {
         static let date = "date"
         static let entry = "entry"
-       
     }
     
-    let date: Int
+    let date: String
     let entry: String
-  
     
     override var description: String {
         return "\(date)"
     }
     
-    init(date: Int, entry: String) {
+    init(date: String, entry: String) {
         self.date = date
         self.entry = entry
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let title = aDecoder.decodeObject(forKey: PropertyKeys.date) as? Int,
-            let author = aDecoder.decodeObject(forKey: PropertyKeys.entry) as? String else {return nil}
+        guard let date = aDecoder.decodeObject(forKey: PropertyKeys.date) as? String,
+            let entry = aDecoder.decodeObject(forKey: PropertyKeys.entry) as? String else {return nil}
+        self.init(date: date, entry: entry)
         
         func encode(with aCoder: NSCoder) {
-            aCoder.encode(title, forKey: PropertyKeys.date)
-            aCoder.encode(author, forKey: PropertyKeys.entry)
+            aCoder.encode(date, forKey: PropertyKeys.date)
+            aCoder.encode(entry, forKey: PropertyKeys.entry)
         }
-        
     }
 }

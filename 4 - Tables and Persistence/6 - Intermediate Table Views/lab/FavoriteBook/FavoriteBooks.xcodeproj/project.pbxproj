@@ -62,10 +62,10 @@
 		2C5E3E181E514CC400C02C5F /* FavoriteBook */ = {
 			isa = PBXGroup;
 			children = (
-				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
 				2C5E3E191E514CC400C02C5F /* AppDelegate.swift */,
-				2C5E3E2B1E514CE500C02C5F /* Book.swift */,
+				2C5E3E331E514EA700C02C5F /* BookTableViewController.swift */,
 				CBD3F1E42188A95C000C1357 /* BookFormTableViewController.swift */,
+				2C5E3E2B1E514CE500C02C5F /* Book.swift */,
 				CBD3F1E62188F3C2000C1357 /* BookTableViewCell.swift */,
 				2C5E3E1D1E514CC400C02C5F /* Main.storyboard */,
 				2C5E3E201E514CC400C02C5F /* Assets.xcassets */,
