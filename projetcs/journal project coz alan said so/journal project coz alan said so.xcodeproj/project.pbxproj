@@ -16,6 +16,7 @@
 		CBDD949A218C8E870010B09F /* JournalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD9499218C8E870010B09F /* JournalTableViewController.swift */; };
 		CBDD949C218C8F040010B09F /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD949B218C8F040010B09F /* Journal.swift */; };
 		CBDD94A0218C9E170010B09F /* JournalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD949F218C9E170010B09F /* JournalsTableViewController.swift */; };
+		CBDD94A2218CA0CB0010B09F /* JournalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDD94A1218CA0CB0010B09F /* JournalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CBDD9499218C8E870010B09F /* JournalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewController.swift; sourceTree = "<group>"; };
 		CBDD949B218C8F040010B09F /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 		CBDD949F218C9E170010B09F /* JournalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalsTableViewController.swift; sourceTree = "<group>"; };
+		CBDD94A1218CA0CB0010B09F /* JournalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				CBDD946B218C8B580010B09F /* AppDelegate.swift */,
 				CBDD949F218C9E170010B09F /* JournalsTableViewController.swift */,
 				CBDD9499218C8E870010B09F /* JournalTableViewController.swift */,
+				CBDD94A1218CA0CB0010B09F /* JournalTableViewCell.swift */,
 				CBDD949B218C8F040010B09F /* Journal.swift */,
 				CBDD946F218C8B580010B09F /* Main.storyboard */,
 				CBDD9472218C8B590010B09F /* Assets.xcassets */,
@@ -264,6 +267,7 @@
 			files = (
 				CBDD949A218C8E870010B09F /* JournalTableViewController.swift in Sources */,
 				CBDD946C218C8B580010B09F /* AppDelegate.swift in Sources */,
+				CBDD94A2218CA0CB0010B09F /* JournalTableViewCell.swift in Sources */,
 				CBDD949C218C8F040010B09F /* Journal.swift in Sources */,
 				CBDD94A0218C9E170010B09F /* JournalsTableViewController.swift in Sources */,
 			);

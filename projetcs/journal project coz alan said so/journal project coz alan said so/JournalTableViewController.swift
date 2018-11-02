@@ -37,7 +37,7 @@ class JournalTableViewController: UITableViewController {
         // actions
         
         @IBAction func saveButtonTapped(_ sender: Any) {
-            guard let date = journalTextViewOutlet.text,
+            guard let date = journalDateTitleOutlet.text,
                 let entry = journalTextViewOutlet.text, else {return}
             
             journal = Journal(date: date, entry: entry)
