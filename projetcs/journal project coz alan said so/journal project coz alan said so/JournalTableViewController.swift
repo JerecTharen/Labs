@@ -43,5 +43,4 @@ class JournalTableViewController: UITableViewController {
             journal = Journal(date: date, entry: entry)
             performSegue(withIdentifier: PropertyKeys.unwind, sender: self)
         }
-        
 }
