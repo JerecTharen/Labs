@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Journal Table View Controller-->
         <scene sceneID="7IE-m0-7OM">
             <objects>
-                <tableViewController id="PCg-Ic-pgw" sceneMemberID="viewController">
+                <tableViewController id="PCg-Ic-pgw" customClass="JournalTableViewController" customModule="journal_project_coz_alan_said_so" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ec3-Dn-m0E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vUE-Ts-cpo">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JournalCell" id="vUE-Ts-cpo">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vUE-Ts-cpo" id="zcy-QG-6EL">
@@ -26,6 +26,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="XY6-WN-bZ1" kind="show" identifier="EditEntry" id="dN4-MS-jDZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +39,7 @@
                     <navigationItem key="navigationItem" id="gCn-MH-Zl4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rzQ-aE-uk6">
                             <connections>
-                                <segue destination="XY6-WN-bZ1" kind="show" id="QXm-a1-NyF"/>
+                                <segue destination="XY6-WN-bZ1" kind="show" identifier="AddEntry" id="QXm-a1-NyF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,6 +113,7 @@
                                                     <state key="normal" title="Save"/>
                                                     <connections>
                                                         <action selector="saveButtonTapped:" destination="XY6-WN-bZ1" eventType="touchUpInside" id="nN0-7L-ip5"/>
+                                                        <segue destination="44Z-Gz-IFb" kind="unwind" identifier="unwindToStart" unwindAction="prepareForUnwindWithSegue:" id="coK-g2-oTJ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -130,6 +134,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPz-3Q-n01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="44Z-Gz-IFb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1074.4000000000001" y="66.11694152923539"/>
         </scene>
@@ -152,4 +157,7 @@
             <point key="canvasLocation" x="-329" y="67"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dN4-MS-jDZ"/>
+    </inferredMetricsTieBreakers>
 </document>
