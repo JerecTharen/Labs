@@ -81,7 +81,7 @@
                     <navigationItem key="navigationItem" id="dFu-No-t5k">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bi3-TZ-Sq4">
                             <connections>
-                                <segue destination="2fy-Zo-xJv" kind="show" id="reL-t0-eVf"/>
+                                <segue destination="2fy-Zo-xJv" kind="show" identifier="EntryCell" id="reL-t0-eVf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,6 +110,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cuA-Ik-Tuo"/>
+        <segue reference="reL-t0-eVf"/>
     </inferredMetricsTieBreakers>
 </document>
