@@ -18,6 +18,7 @@ class EmojiTableViewController: UITableViewController {
                   Emoji(symbol: "🏁", name: "Checkered Flag", detailDescription: "A black and white checkered flag.", usage: "completion")]
 
     // MARK: - Table view data source
+    
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

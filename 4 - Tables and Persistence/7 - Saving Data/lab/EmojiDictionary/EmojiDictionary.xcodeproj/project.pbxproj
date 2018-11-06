@@ -44,7 +44,7 @@
 		019F10A21E3FB23F00E98464 = {
 			isa = PBXGroup;
 			children = (
-				019F10AD1E3FB23F00E98464 /* EmojiDictionary */,
+				019F10AD1E3FB23F00E98464 /* EmojiDictionary2 */,
 				019F10AC1E3FB23F00E98464 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		019F10AD1E3FB23F00E98464 /* EmojiDictionary */ = {
+		019F10AD1E3FB23F00E98464 /* EmojiDictionary2 */ = {
 			isa = PBXGroup;
 			children = (
 				BE1C5B2A1E9577370072EB1E /* AppDelegate.swift */,
@@ -70,7 +70,7 @@
 				BE1C5B3A1E9577790072EB1E /* Assets.xcassets */,
 				BE1C5B3B1E9577790072EB1E /* Info.plist */,
 			);
-			name = EmojiDictionary;
+			name = EmojiDictionary2;
 			path = tvwalkthrough3;
 			sourceTree = "<group>";
 		};
