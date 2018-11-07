@@ -31,6 +31,7 @@ class FurnitureDetailViewController: UIViewController {
     }
     
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {
+        var uIImagePicker = UIImagePickerController()
         
     }
 
@@ -39,3 +40,4 @@ class FurnitureDetailViewController: UIViewController {
     }
     
 }
+

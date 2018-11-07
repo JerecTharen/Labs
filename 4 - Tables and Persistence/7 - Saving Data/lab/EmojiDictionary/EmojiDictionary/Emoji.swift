@@ -45,7 +45,7 @@ struct Emoji: Codable {
         //encode
     }
     
-    static func loadToFile() -> [Emoji]? {
+    static func loadToFile(emojis: [Emoji]) -> [Emoji]? {
         let propertyListDecoder = PropertyListDecoder()
         if let retrievedData = try? Data(contentsOf: Emoji.archiveURL) {
             let decodeEmoji = try? propertyListDecoder.decode(Emoji.self, from: retrievedData)
