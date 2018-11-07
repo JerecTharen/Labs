@@ -33,7 +33,7 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
     @IBAction func choosePhotoButtonTapped(_ sender: Any) {
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             
-            if let selectedImage = info[UINavigationController] as? UIImage {
+            if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
                 imageView.image = selectedImage
                 dismiss(animated: true, completion: nil)
             }
