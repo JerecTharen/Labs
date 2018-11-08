@@ -29,10 +29,12 @@ class AddRegistrationTableViewController: UITableViewController {
 let midnightToday = Calendar.current.startOfDay(for: Date())
         checkInDatePicker.minimumDate = midnightToday
         checkInDatePicker.date = midnightToday
+        
+        updateDateViews()
     
     }
     
-    func updateDateVies() {
+    func updateDateViews() {
         checkOutDatePicker.minimumDate = checkInDatePicker.date.addingTimeInterval(86400)
         
         let dateFormatter = DateFormatter()
@@ -47,7 +49,7 @@ let midnightToday = Calendar.current.startOfDay(for: Date())
     // actions
     
     @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
-        updateDateVies()
+        updateDateViews()
     }
     
     @IBAction func doneBarButonTapped(_ sender :UIBarButtonItem) {
