@@ -38,6 +38,11 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
                 dismiss(animated: true, completion: nil)
             }
         }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            dismiss(animated: true, completion: nil)
+        }
+        
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -63,12 +68,7 @@ class FurnitureDetailViewController: UIViewController, UIImagePickerControllerDe
         
         let cancel = UIAlertAction(title: nil, style: .cancel, handler: nil)
         alertController.addAction(cancel)
-        
-        let chooseImage = UIAlertAction(title: "pick an image", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-        alertController.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
-        let useCamera = UIAlertAction(title: "can we use camera b0ss?", style: .default, handler: <#T##((UIAlertAction) -> Void)?##((UIAlertAction) -> Void)?##(UIAlertAction) -> Void#>)
-        alertController.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
-        present(alertController, animated: true, completion: nil)
+       
         
     }
 
