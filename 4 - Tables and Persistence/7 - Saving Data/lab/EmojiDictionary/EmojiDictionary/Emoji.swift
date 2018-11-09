@@ -45,12 +45,10 @@ struct Emoji: Codable {
         //encode
     }
     
-    static func loadToFile(emojis: [Emoji]) -> [Emoji]? {
-        let propertyListDecoder = PropertyListDecoder()
-        if let retrievedData = try? Data(contentsOf: Emoji.archiveURL) {
-            let decodeEmoji = try? propertyListDecoder.decode(Emoji.self, from: retrievedData)
-        }
-        //decode
-        return [Emoji]
+    static func loadFromFile() -> [Emoji]?  {
+        guard let codedEmojis = try? Data(contentsOf: archiveURL) else {return nil}
+        let decoder = PropertyListDecoder()
+        return try? decoder.decode([Emoji].self, from: codedEmojis)
     }
 }
+
