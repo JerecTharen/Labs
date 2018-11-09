@@ -53,5 +53,4 @@ struct Emoji: Codable {
         //decode
         return [Emoji]
     }
-    
 }
