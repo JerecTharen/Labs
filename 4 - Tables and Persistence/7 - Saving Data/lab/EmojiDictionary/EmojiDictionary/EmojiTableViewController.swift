@@ -57,6 +57,7 @@ class EmojiTableViewController: UITableViewController {
             emojis.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        
     }
     
 
@@ -89,6 +90,7 @@ class EmojiTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
         }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

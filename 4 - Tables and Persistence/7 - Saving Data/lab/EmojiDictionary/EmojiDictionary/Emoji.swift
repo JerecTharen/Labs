@@ -1,11 +1,15 @@
 
 import Foundation
 
-struct Emoji: Codable {
+class Emoji: Codable {
     var symbol: String
     var name: String
     var detailDescription: String
     var usage: String
+    
+    static var documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    
+    static var archiveURL = documentsDirectory.appendingPathComponent("emoji").appendingPathExtension("plist")
     
     init(symbol: String, name: String, detailDescription: String, usage: String) {
         self.symbol = symbol
@@ -15,12 +19,7 @@ struct Emoji: Codable {
     }
     
     
-    
-    static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    
-    static let archiveURL = documentsDirectory.appendingPathComponent("emoji").appendingPathExtension("plist")
-    
-    static func loadSampleFile() {
+    static func loadSampleEmojis() {
         var emojis = [Emoji(symbol: "😀", name: "Grinning Face", detailDescription: "A typical smiley face.", usage: "happiness"),
                       Emoji(symbol: "😕", name: "Confused Face", detailDescription: "A confused, puzzled face.", usage: "unsure what to think; displeasure"),
                       Emoji(symbol: "😍", name: "Heart Eyes", detailDescription: "A smiley face with hearts for eyes.", usage: "love of something; attractive"),

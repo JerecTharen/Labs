@@ -22,6 +22,7 @@ class AddEditEmojiTableViewController: UITableViewController {
             usageTextField.text = emoji.usage
         }
         
+        
         updateSaveButtonState()
     }
     
