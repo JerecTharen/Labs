@@ -52,6 +52,5 @@ extension Emoji {
         return emojis
     }
     
-    
 }
 
