@@ -11,7 +11,7 @@ import UIKit
 class FoodTableViewController: UITableViewController {
     
     var meals: [Meal] = [
-        Meal(name: "breakfast", food: [Food(name: "pancakes", description: "round")]),
+        Meal(name: "breakfast", food: [Food(name: "pancakes", description: "round"), Food(name: "syrup", description: "maple")]),
         Meal(name: "lunch", food: [Food(name: "bread", description: "starch")]),
         Meal(name: "dinner", food: [Food(name: "soup", description: "liquid")])
         
@@ -37,17 +37,30 @@ class FoodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
         
-        let meal = meals[IndexPath.section]
-        let food = meals[IndexPath.row]
+        let meal = meals[indexPath.section]
+        let food = meals[indexPath.row]
         
-        cell.textLabel?.text = "\(meal.name) - \(meal.food)"
-        cell.detailTextLabel?.text = food.description
+        var allFoodInMeal: String = ""
+        var allDescription: String = ""
+        for food in meal.food {
+            if meal.food[0].name == food.name {
+                allFoodInMeal = food.name
+                allDescription = food.description
+            }
+            else {
+                allFoodInMeal = "\(allFoodInMeal), \(food.name)"
+                allDescription = "\(allDescription), \(food.description)"
+            }
+        }
+        
+        cell.textLabel?.text = "\(meal.name) - \(allFoodInMeal)"
+        cell.detailTextLabel?.text = allDescription
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        <#code#>
+        return meals[section].name
     }
 
 }
