@@ -12,9 +12,16 @@ class FoodTableViewController: UITableViewController {
     
     var meals: [Meal] = [
         Meal(name: "breakfast", food: [Food(name: "pancakes", description: "round"), Food(name: "syrup", description: "maple")]),
-        Meal(name: "lunch", food: [Food(name: "bread", description: "starch")]),
-        Meal(name: "dinner", food: [Food(name: "soup", description: "liquid")])
+        Meal(name: "breakfast", food: [Food(name: "ramen", description: "poor"), Food(name: "spice", description: "spicery")]),
+        Meal(name: "breakfast", food: [Food(name: "nothing", description: "starve"), Food(name: "luigi", description: "wait what?")]),
         
+        Meal(name: "lunch", food: [Food(name: "bread", description: "starch")]),
+        Meal(name: "lunch", food: [Food(name: "ham", description: "pig")]),
+        Meal(name: "lunch", food: [Food(name: "cheese", description: "not on fire")]),
+        
+        Meal(name: "dinner", food: [Food(name: "soup", description: "liquid")]),
+        Meal(name: "dinner", food: [Food(name: "cat", description: "meow")]),
+        Meal(name: "dinner", food: [Food(name: "more soup", description: " more liquid")])
     ]
     
     override func viewDidLoad() {
@@ -23,7 +30,6 @@ class FoodTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return meals.count
@@ -62,5 +68,5 @@ class FoodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return meals[section].name
     }
-
+    
 }
