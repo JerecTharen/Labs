@@ -1,17 +1,26 @@
 
 import UIKit
 
-class EmployeeDetailTableViewController: UITableViewController, UITextFieldDelegate {
-
+class EmployeeDetailTableViewController: UITableViewController, UITextFieldDelegate, EmployeeTypeDelegate {
+  
     struct PropertyKeys {
         static let unwindToListIndentifier = "UnwindToListSegue"
     }
+    
+    var employee: Employee?
+    var employeeType: EmployeeType?
     
     var isEditingBirthday: Bool = false {
         didSet {
             tableView.beginUpdates()
             tableView.endUpdates()
         }
+    }
+    
+    func didSelect(employeeType: EmployeeType) {
+        self.employeeType = employeeType
+        employeeTypeLabel.text = employeeType.description()
+        employeeTypeLabel.textColor = .black
     }
     
     func updateBirthdayPicker () {
@@ -27,8 +36,6 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var employeeTypeLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
-    var employee: Employee?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,8 +98,10 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if let name = nameTextField.text {
-            employee = Employee(name: name, dateOfBirth: datePicker.date, employeeType: .exempt)
+            if let employeeTypeExists = employeeType {
+            employee = Employee(name: name, dateOfBirth: datePicker.date, employeeType: employeeTypeExists)
             performSegue(withIdentifier: PropertyKeys.unwindToListIndentifier, sender: self)
+            }
         }
     }
     
