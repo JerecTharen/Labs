@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         updateZoomFor(size: view.bounds.size)
     }
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let minScale = min(widthScale, heightScale)
         
         scrollViewOutlet.minimumZoomScale = minScale
+        scrollViewOutlet.zoomScale = minScale
     }
 
 
