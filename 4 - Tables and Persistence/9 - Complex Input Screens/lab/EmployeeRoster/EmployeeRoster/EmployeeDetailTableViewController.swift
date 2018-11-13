@@ -7,8 +7,6 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         static let unwindToListIndentifier = "UnwindToListSegue"
     }
     
-    let birthdayDayDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
-    
     var isEditingBirthday: Bool = false {
         didSet {
             tableView.beginUpdates()
@@ -16,9 +14,19 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         }
     }
     
+    func updateBirthdayPicker () {
+        if isEditingBirthday {
+            datePicker.isHidden = false
+        } else {
+            datePicker.isHidden = true
+        }
+        
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var employeeTypeLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     var employee: Employee?
     
@@ -26,6 +34,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         super.viewDidLoad()
         
         updateView()
+        updateBirthdayPicker()
     }
     
     func updateView() {
@@ -42,23 +51,47 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
             navigationItem.title = "New Employee"
         }
     }
+    @IBAction func dobChanged(_ sender: Any) {
+        dobLabel.text = formDate(date: datePicker.date)
+        dobLabel.textColor = .red
+    }
     
+    func formDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == dateOfBirthRow {
+            isEditingBirthday = true
+            updateBirthdayPicker()
+            tableView.reloadData()
+        } else {
+            isEditingBirthday = false
+            updateBirthdayPicker()
+            tableView.reloadData()
+        }
+    }
+    
+    let nameRow = 0
+    let dateOfBirthRow = 1
+    let dateOfBirthPickerRow = 2
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch (indexPath.section, indexPath.row) {
-        case (birthdayDayDatePickerCellIndexPath.row, birthdayDayDatePickerCellIndexPath.section):
+        if indexPath.row == dateOfBirthPickerRow {
             if isEditingBirthday {
-                return 0.0
+                return 162
             } else {
-                dobDatePicker.frame.height
+                return 0
             }
-            
-        default: return 44.0
+        } else {
+            return 44.0
         }
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if let name = nameTextField.text {
-            employee = Employee(name: name, dateOfBirth: Date(), employeeType: .exempt)
+            employee = Employee(name: name, dateOfBirth: datePicker.date, employeeType: .exempt)
             performSegue(withIdentifier: PropertyKeys.unwindToListIndentifier, sender: self)
         }
     }
@@ -73,5 +106,5 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
-
+    
 }
