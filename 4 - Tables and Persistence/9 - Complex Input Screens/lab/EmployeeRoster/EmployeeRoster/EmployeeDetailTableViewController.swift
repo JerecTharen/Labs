@@ -7,6 +7,15 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         static let unwindToListIndentifier = "UnwindToListSegue"
     }
     
+    let birthdayDayDatePickerCellIndexPath = IndexPath(row: 3, section: 1)
+    
+    var isEditingBirthday: Bool = false {
+        didSet {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dobLabel: UILabel!
     @IBOutlet weak var employeeTypeLabel: UILabel!
@@ -31,6 +40,19 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
             employeeTypeLabel.textColor = .black
         } else {
             navigationItem.title = "New Employee"
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (birthdayDayDatePickerCellIndexPath.row, birthdayDayDatePickerCellIndexPath.section):
+            if isEditingBirthday {
+                return 0.0
+            } else {
+                dobDatePicker.frame.height
+            }
+            
+        default: return 44.0
         }
     }
     
