@@ -9,21 +9,17 @@
 import UIKit
 
 class GameTableViewCell: UITableViewCell {
-
-        override func awakeFromNib() {
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
-            func updatePerson(with person: Person) {
-                
-            }
-            func updateScore(with score: Score) {
-                
-            }
+        func updatePerson(with person: Person) {
+            
+        }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
-
+    
 }

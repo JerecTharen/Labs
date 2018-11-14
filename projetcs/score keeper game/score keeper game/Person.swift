@@ -24,7 +24,7 @@ class Person: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let name = aDecoder.decodeObject(forKey: Person.name) as? String,
-        let score = aDecoder.decodeObject(forKey: Person.score) as? Int
+            let score = aDecoder.decodeObject(forKey: Person.score) as? Int
             else {return nil}
         self.init(name: name, score: score)
     }
