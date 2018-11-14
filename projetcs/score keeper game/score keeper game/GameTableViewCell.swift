@@ -12,7 +12,12 @@ class GameTableViewCell: UITableViewCell {
 
         override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+            func updatePerson(with person: Person) {
+                
+            }
+            func updateScore(with score: Score) {
+                
+            }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

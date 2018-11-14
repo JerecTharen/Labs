@@ -28,7 +28,8 @@ class GameTableViewController: UITableViewController {
     func updateView() {
         guard let person = person else {return}
         playerNameTextViewOutlet.text = person.name
-        scoreLabelOutlet.text = score?.score
+        guard let score = score else {return}
+        scoreLabelOutlet.text = String(score.score)
     }
 
     // MARK: - Table view data source
