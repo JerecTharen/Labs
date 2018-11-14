@@ -15,6 +15,7 @@
 		A93AF3CD1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */; };
 		A93AF3CF1E4FB5410099CF76 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93AF3CE1E4FB5410099CF76 /* Employee.swift */; };
 		CB5C6596219B372900836761 /* TypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C6595219B372900836761 /* TypeTableViewController.swift */; };
+		CB5C65D4219C71CF00836761 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C65D3219C71CE00836761 /* GameTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A93AF3CC1E4FB5320099CF76 /* EmployeeDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableViewController.swift; sourceTree = "<group>"; };
 		A93AF3CE1E4FB5410099CF76 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		CB5C6595219B372900836761 /* TypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeTableViewController.swift; sourceTree = "<group>"; };
+		CB5C65D3219C71CE00836761 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A93AF3CE1E4FB5410099CF76 /* Employee.swift */,
 				CB5C6595219B372900836761 /* TypeTableViewController.swift */,
 				A93AF3BC1E4FB44E0099CF76 /* Main.storyboard */,
+				CB5C65D3219C71CE00836761 /* GameTableViewCell.swift */,
 				A93AF3BF1E4FB44E0099CF76 /* Assets.xcassets */,
 				A93AF3C11E4FB44E0099CF76 /* LaunchScreen.storyboard */,
 				A93AF3C41E4FB44E0099CF76 /* Info.plist */,
@@ -150,6 +153,7 @@
 				CB5C6596219B372900836761 /* TypeTableViewController.swift in Sources */,
 				A93AF3CF1E4FB5410099CF76 /* Employee.swift in Sources */,
 				A93AF3CB1E4FB5240099CF76 /* EmployeeListTableViewController.swift in Sources */,
+				CB5C65D4219C71CF00836761 /* GameTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
