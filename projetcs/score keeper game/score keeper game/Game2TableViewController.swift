@@ -14,7 +14,6 @@ class Game2TableViewController: UITableViewController {
     struct pKeys {
         static let personCell = "personCell"
         static let addPersonSegue = "addPerson"
-        static let editPersonSegue = "editPerson"
     }
     
     var persons: [Person] = []
@@ -71,7 +70,7 @@ class Game2TableViewController: UITableViewController {
         guard let gameTableViewController = segue.destination as? GameTableViewController else {return}
         
         if let indexPath = tableView.indexPathForSelectedRow,
-            segue.identifier == pKeys.editPersonSegue {
+            segue.identifier == pKeys.addPersonSegue {
             gameTableViewController.person = persons[indexPath.row]
         }
     }

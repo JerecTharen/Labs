@@ -62,7 +62,7 @@
                     <navigationItem key="navigationItem" id="gIB-nc-Oaz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="E9b-o9-fr6">
                             <connections>
-                                <segue destination="cJk-ZD-jC9" kind="show" id="JJK-fo-UV2"/>
+                                <segue destination="cJk-ZD-jC9" kind="show" identifier="addPerson" id="JJK-fo-UV2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -87,6 +87,7 @@
                             <state key="normal" title="Save"/>
                             <connections>
                                 <action selector="saveButtonTapped:" destination="cJk-ZD-jC9" eventType="touchUpInside" id="MRD-V4-ZSO"/>
+                                <segue destination="TAz-qW-2hA" kind="unwind" identifier="UnwindToVC" unwindAction="prepareForUnwindWithSegue:" id="4gp-4F-3JB"/>
                             </connections>
                         </button>
                         <sections>
@@ -124,8 +125,9 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVu-8P-qLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TAz-qW-2hA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1781.5999999999999" y="291.90404797601201"/>
+            <point key="canvasLocation" x="1809" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A9A-kk-UqA">
