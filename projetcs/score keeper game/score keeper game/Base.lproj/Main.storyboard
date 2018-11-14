@@ -60,13 +60,59 @@
                         <sections/>
                     </tableView>
                     <navigationItem key="navigationItem" id="gIB-nc-Oaz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E9b-o9-fr6"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E9b-o9-fr6">
+                            <connections>
+                                <segue destination="cJk-ZD-jC9" kind="show" id="JJK-fo-UV2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKv-NM-KYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="y2f-6S-Q1n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="991" y="77"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="j9k-0y-N2d">
+            <objects>
+                <tableViewController id="cJk-ZD-jC9" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gYY-ey-BuE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VYb-3m-8GV">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VYb-3m-8GV" id="wgD-iM-nbc" customClass="GameTableViewCell" customModule="score_keeper_game" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-g3-1Yr">
+                                            <rect key="frame" x="16" y="6" width="97" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="playerNameTextViewOutlet:" destination="wgD-iM-nbc" eventType="editingDidEnd" id="IuX-KP-Lw0"/>
+                                                <action selector="playerNameTextViewOutlet:" destination="y2f-6S-Q1n" eventType="editingDidEnd" id="aTe-Lg-eJr"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cJk-ZD-jC9" id="uP3-Br-o7c"/>
+                            <outlet property="delegate" destination="cJk-ZD-jC9" id="IcV-Pn-0LS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVu-8P-qLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A9A-kk-UqA">

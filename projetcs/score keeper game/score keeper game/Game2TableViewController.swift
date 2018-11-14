@@ -1,5 +1,5 @@
 //
-//  GameTableViewController.swift
+//  Game2TableViewController.swift
 //  score keeper game
 //
 //  Created by Tyler Donohue on 11/14/18.
@@ -8,43 +8,34 @@
 
 import UIKit
 
-class GameTableViewController: UITableViewController {
-    
-    //outlets
-    @IBOutlet weak var playerNameTextViewOutlet: UITextField!
-    @IBOutlet weak var scoreStepperOutlet: UIStepper!
-    @IBOutlet weak var scoreLabelOutlet: UILabel!
-    @IBOutlet weak var addPlayerBarItemOutlet: UIBarButtonItem!
-    
-    var person: Person?
-    
-        override func viewDidLoad() {
-        super.viewDidLoad()
-            updateView()
+class Game2TableViewController: UITableViewController {
 
-    }
-    
-    func updateView() {
-        guard let person = person else {return}
-        playerNameTextViewOutlet.text = person.name
-        scoreLabelOutlet.text = String(person.score)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-       
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+        // #warning Incomplete implementation, return the number of rows
         return 0
     }
 
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
+
+        return cell
+    }
     
- 
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,10 +73,6 @@ class GameTableViewController: UITableViewController {
     */
 
     /*
-     
-     //actions
-     
-     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
