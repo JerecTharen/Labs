@@ -9,11 +9,14 @@
 import UIKit
 
 class Game2TableViewController: UITableViewController {
+
+    @IBOutlet weak var addPlayerOutlet: UIBarButtonItem!
     
     
     struct pKeys {
         static let personCell = "personCell"
         static let addPersonSegue = "addPerson"
+        static let editPerson = "editPerson"
     }
     
     var persons: [Person] = []
@@ -82,6 +85,8 @@ class Game2TableViewController: UITableViewController {
         }
     }
     
+    
+    
     /*
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -126,5 +131,6 @@ class Game2TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

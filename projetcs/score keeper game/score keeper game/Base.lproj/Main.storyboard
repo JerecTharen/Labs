@@ -25,34 +25,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7UZ-9D-4GX" id="fJD-TH-BNn" customClass="GameTableViewCell" customModule="score_keeper_game" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl5-2q-QRF">
-                                            <rect key="frame" x="315" y="12" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-q8-g2Q">
-                                            <rect key="frame" x="213" y="8" width="94" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="scoreStepperOutlet:" destination="y2f-6S-Q1n" eventType="valueChanged" id="UgR-U4-mRS"/>
-                                                <action selector="stepperButtonTapped:" destination="y2f-6S-Q1n" eventType="valueChanged" id="1YS-XV-I5G"/>
-                                            </connections>
-                                        </stepper>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzK-lE-BUR">
-                                            <rect key="frame" x="16" y="6" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                            <connections>
-                                                <action selector="playerNameTextViewOutlet:" destination="fJD-TH-BNn" eventType="editingDidEnd" id="hc9-Hf-XfQ"/>
-                                                <action selector="playerNameTextViewOutlet:" destination="y2f-6S-Q1n" eventType="editingDidEnd" id="qTa-05-MZg"/>
-                                            </connections>
-                                        </textField>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
@@ -67,6 +39,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addPlayerOutlet" destination="E9b-o9-fr6" id="BmS-DL-k5W"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKv-NM-KYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="y2f-6S-Q1n" userLabel="Exit" sceneMemberID="exit"/>
@@ -112,6 +87,20 @@
                                                         <action selector="playerNameTextViewOutlet:" destination="y2f-6S-Q1n" eventType="editingDidEnd" id="aTe-Lg-eJr"/>
                                                     </connections>
                                                 </textField>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1av-s9-TG1">
+                                                    <rect key="frame" x="201" y="7" width="94" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="stepperButtonTapped:" destination="cJk-ZD-jC9" eventType="valueChanged" id="9d4-Rt-WbB"/>
+                                                    </connections>
+                                                </stepper>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eD-h0-IMp">
+                                                    <rect key="frame" x="303" y="12" width="43" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +113,11 @@
                             <outlet property="delegate" destination="cJk-ZD-jC9" id="IcV-Pn-0LS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="playerNameTextViewOutlet" destination="bM6-g3-1Yr" id="jB3-13-fzf"/>
+                        <outlet property="scoreLabelOutlet" destination="3eD-h0-IMp" id="44s-AB-gyx"/>
+                        <outlet property="scoreStepperOutlet" destination="1av-s9-TG1" id="AGh-M3-CAa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVu-8P-qLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="TAz-qW-2hA" userLabel="Exit" sceneMemberID="exit"/>
