@@ -43,6 +43,12 @@ class GameTableViewController: UITableViewController {
         person = Person(name: name, score: 0)
         performSegue(withIdentifier: Unwind.unwind, sender: self)
     }
+    @IBAction func stepperButtonTapped(_ sender: UIStepper) {
+        scoreLabelOutlet.text = String(sender.value)
+    }
+    
+    
+    
     
     
 }

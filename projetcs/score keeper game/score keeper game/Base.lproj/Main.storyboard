@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="scoreStepperOutlet:" destination="y2f-6S-Q1n" eventType="valueChanged" id="UgR-U4-mRS"/>
-                                                <action selector="scoreStepperOutlet:" destination="fJD-TH-BNn" eventType="valueChanged" id="Vz6-bn-ONf"/>
+                                                <action selector="stepperButtonTapped:" destination="y2f-6S-Q1n" eventType="valueChanged" id="1YS-XV-I5G"/>
                                             </connections>
                                         </stepper>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzK-lE-BUR">
@@ -60,6 +60,7 @@
                         <sections/>
                     </tableView>
                     <navigationItem key="navigationItem" id="gIB-nc-Oaz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="cDS-07-Pc0"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="E9b-o9-fr6">
                             <connections>
                                 <segue destination="cJk-ZD-jC9" kind="show" identifier="addPerson" id="JJK-fo-UV2"/>
