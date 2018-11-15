@@ -11,14 +11,23 @@ import UIKit
 class GameTableViewCell: UITableViewCell {
     
     //properties
-    //outlets go here from
+    @IBOutlet weak var enterPlayerNameTextView: UITextView!
+    @IBOutlet weak var playerScore: UILabel!
     
-    var person: Person?
+    var person: Person? {
+        didSet {
+            update()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func updatePerson(with person: Person) {
+    func update() {
+        if let person = person {
+            enterPlayerNameTextView.text = person.name
+            playerScore.text = String(person.score)
+        }
         
     }
     

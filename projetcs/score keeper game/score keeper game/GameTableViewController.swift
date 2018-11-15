@@ -14,7 +14,6 @@ class GameTableViewController: UITableViewController {
     @IBOutlet weak var playerNameTextViewOutlet: UITextField!
     @IBOutlet weak var scoreStepperOutlet: UIStepper!
     @IBOutlet weak var scoreLabelOutlet: UILabel!
-    @IBOutlet weak var addPlayerBarItemOutlet: UIBarButtonItem!
     
     struct Unwind {
         static let unwind = "UnwindToVC"
