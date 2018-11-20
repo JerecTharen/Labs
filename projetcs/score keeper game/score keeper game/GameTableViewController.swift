@@ -21,6 +21,7 @@ class GameTableViewController: UITableViewController {
     
     var person: Person?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()

@@ -41,7 +41,7 @@ class Game2TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: pKeys.personCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gameTableViewController", for: indexPath)
         
         let person = self.persons[indexPath.row]
         cell.textLabel?.text = person.name
