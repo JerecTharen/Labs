@@ -15,6 +15,7 @@
 		CB5C664A21A453D400836761 /* project__ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C664921A453D400836761 /* project__ListUITests.swift */; };
 		CB5C665A21A454D000836761 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C665921A454D000836761 /* ListTableViewCell.swift */; };
 		CB5C665C21A4566300836761 /* InitialListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C665B21A4566300836761 /* InitialListTableViewController.swift */; };
+		CB5C665E21A4588A00836761 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C665D21A4588A00836761 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CB5C664B21A453D400836761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB5C665921A454D000836761 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		CB5C665B21A4566300836761 /* InitialListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialListTableViewController.swift; sourceTree = "<group>"; };
+		CB5C665D21A4588A00836761 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				CB5C662921A453D200836761 /* AppDelegate.swift */,
 				CB5C665B21A4566300836761 /* InitialListTableViewController.swift */,
+				CB5C665D21A4588A00836761 /* ToDo.swift */,
 				CB5C665921A454D000836761 /* ListTableViewCell.swift */,
 				CB5C662D21A453D200836761 /* Main.storyboard */,
 				CB5C663021A453D400836761 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 				CB5C665C21A4566300836761 /* InitialListTableViewController.swift in Sources */,
 				CB5C662A21A453D200836761 /* AppDelegate.swift in Sources */,
 				CB5C665A21A454D000836761 /* ListTableViewCell.swift in Sources */,
+				CB5C665E21A4588A00836761 /* ToDo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

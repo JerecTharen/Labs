@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial List Table View Controller-->
+        <!--Initial List TVC-->
         <scene sceneID="TyE-pG-HfI">
             <objects>
                 <tableViewController id="WqY-QP-FR6" customClass="InitialListTableViewController" customModule="project__List" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="WqY-QP-FR6" id="RbA-Ia-Psr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dIO-Ap-hfe"/>
+                    <navigationItem key="navigationItem" title="Initial List TVC" id="dIO-Ap-hfe"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kea-NB-tXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
