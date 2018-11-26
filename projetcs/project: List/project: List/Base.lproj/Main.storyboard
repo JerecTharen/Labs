@@ -72,7 +72,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X46-AH-cuY">
                                                     <rect key="frame" x="16" y="3" width="36" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                     <state key="normal" title="Button" image="ICC_emptyStar_2x"/>
+                                                    <state key="selected" image="ICC_filledStar_2x"/>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -149,5 +151,6 @@
     </scenes>
     <resources>
         <image name="ICC_emptyStar_2x" width="75" height="75"/>
+        <image name="ICC_filledStar_2x" width="75" height="75"/>
     </resources>
 </document>
