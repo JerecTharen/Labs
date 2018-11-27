@@ -14,14 +14,20 @@ class DetailToDoTableViewController: UITableViewController {
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateSaveButtonState()
         
     }
 
     // MARK: - Table view data source
+    func updateSaveButtonState() {
+        let text = titleTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
 
         return 0
@@ -86,5 +92,14 @@ class DetailToDoTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func textEditingChange(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+    @IBAction func returnPressed(_ sender: UITextField) {
+        titleTextField.resignFirstResponder()
+    }
+    @IBAction func isCompleteTapped(_ sender: UIButton) {
+        isComplete.isSelected = !isComplete.isSelected
+    }
+    
 }
