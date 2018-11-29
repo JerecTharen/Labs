@@ -17,6 +17,7 @@ rere.pluralization()
 
 var sentence = "every good boi is good"
 sentence.jelloize()
+print(sentence.jelloize())
 
 extension CustomStringConvertible {
     var description: String {
