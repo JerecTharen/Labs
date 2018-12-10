@@ -1,18 +1,9 @@
 import UIKit
 import PlaygroundSupport
 
-// Part One: HTTP, URLs, and URL Session
+// Part Two: JSON Serialization
 
 PlaygroundPage.current.needsIndefiniteExecution = true
-
-   var baseURL = URL(string: "https://itunes.apple.com/search?")!
-
-let query: [String: String] = [
-    "term": "Inside Out 2015",
-    "media": "movie",
-    "lang": "en_us",
-    "limit": "10"
-]
 
 extension URL {
     
@@ -24,79 +15,71 @@ extension URL {
     }
 }
 
-struct StoreItems: Codable {
-    let results = [StoreItem]
-}
-
-struct StoreItem: Codable {
+struct StoreItem {
+    
     var name: String
     var artist: String
+    var description: String
     var kind: String
     var artworkURL: URL
-    var description: String
-}
-
-enum AdditionalKeys: String, CodingKey {
-    case longDescription
-}
- 
-init?(json : [String: Any]) {
-    guard let name = json["trackName"] as? String,
-        let artist = json["artistName"] as? String,
-        let kind = json["kind"] as? String,
-        let artworkURLString = json["artworkUrl100"] as? String,
-        let artworkURL = URL(string: artworkURLString) else { return nil }
-    self.name = name
-    self.artist = artist
-    self.kind = kind
-    self.artwork = artworkURL
-    self.description = json["description"] as? String ?? json["longDescription"] as? String ?? ""
     
-    
-    
+    init?(json: [String: Any]) {
+        
+        guard let name = json["trackName"] as? String,
+            let artist = json["artistName"] as? String,
+            let kind = json["kind"] as? String,
+            let artworkURLString = json["artworkUrl100"] as? String,
+            let artworkURL = URL(string: artworkURLString) else { return nil }
+        
+        self.name = name
+        self.artist = artist
+        self.kind = kind
+        self.artworkURL = artworkURL
+        
+        self.description = json["description"] as? String ?? json["longDescription"] as? String ?? ""
+    }
 }
-
-
-
-//struct StoreItems: Codable {
-//    let results = [StoreItem]
-//}
 
 func fetchItems(matching query: [String: String], completion: @escaping ([StoreItem]?) -> Void) {
-      
+    
+    let baseURL = URL(string: "https://itunes.apple.com/search?")!
+    
     guard let url = baseURL.withQueries(query) else {
+        
         completion(nil)
         print("Unable to build URL with supplied queries.")
         return
     }
-      
+    
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-        let decoder = JSONDecoder()
+        
         if let data = data,
-            let storeItems = try? decoder.decode(StoreItem.self, from: data) {
-            completion(storeItems.results)
+            let rawJSON = try? JSONSerialization.jsonObject(with: data),
+            let json = rawJSON as? [String: Any],
+            let resultsArray = json["results"] as? [[String: Any]] {
+            
+            let storeItems = resultsArray.compactMap { StoreItem(json: $0) }
+            completion(storeItems)
+            
         } else {
-            print("Either no data was returned, or data wasnot serialized.")
+            print("Either no data was returned, or data was not serialized.")
             completion(nil)
             return
         }
     }
-      
     task.resume()
 }
 
-//let searchURL = baseURL.withQueries(query)!
-//
-//URLSession.shared.dataTask(with: searchURL) { (data, response, error) in
-//
-//    if let data = data,
-//        let string = String(data: data, encoding: .utf8) {
-//
-//        print(string)
-//        PlaygroundPage.current.finishExecution()
-//    }
-//}.resume()
+let query: [String: String] = [
+    "term": "Inside Out 2015",
+    "media": "movie",
+    "lang": "en_us",
+    "limit": "10"
+]
 
+fetchItems(matching: query) { (items) in
+    print(items as Any)
+}
 /*:
  
  _Copyright © 2017 Apple Inc._
