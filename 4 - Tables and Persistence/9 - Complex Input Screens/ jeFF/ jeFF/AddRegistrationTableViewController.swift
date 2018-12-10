@@ -125,6 +125,7 @@ class AddRegistrationTableViewController: UITableViewController {
         }
     }
     
+  
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch (indexPath.section, indexPath.row) {

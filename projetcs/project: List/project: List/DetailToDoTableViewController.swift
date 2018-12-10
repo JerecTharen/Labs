@@ -16,33 +16,83 @@ class DetailToDoTableViewController: UITableViewController {
     @IBOutlet weak var notesTextView: UITextView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var isEndDatePickerHidden = true
+    var todo: ToDo?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let todo = todo {
+            navigationItem.title = "To-Do"
+            titleTextField.text = todo.title
+            isComplete.isSelected = todo.isComplete
+            dueDatePicker.date = todo.dueDate
+            notesTextView.text = todo.notes
+        } else {
+            dueDatePicker.date = Date().addingTimeInterval(24*60*60)
+        }
+        updateDueDateLabel(date: dueDatePicker.date)
         updateSaveButtonState()
         
     }
-
+    
     // MARK: - Table view data source
-    func updateSaveButtonState() {
-        let text = titleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let normalCellHeight = CGFloat(44)
+        let largeCellHeight = CGFloat(200)
+        switch(indexPath) {
+        case [1,0]:
+            return isEndDatePickerHidden ? normalCellHeight : largeCellHeight
+        case [2,0]:
+            return largeCellHeight
+        default: return normalCellHeight
+        }
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-
-        return 0
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath) {
+        case [1,0]:
+            isEndDatePickerHidden = !isEndDatePickerHidden
+            dueDateLabel.textColor = isEndDatePickerHidden ? .black : tableView.tintColor
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        default: break
+        }
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return 0
+    
+    func updateDueDateLabel(date: Date) {
+        dueDateLabel.text = ToDo.dueDateFormatter.string(from: date)
     }
-
+    
+    func updateSaveButtonState() {
+        if titleTextField.text == "" {
+            print("nogo")
+        } 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "saveUnwind" else {return}
+        
+        let title = titleTextField.text!
+        let isCompleted = isComplete.isSelected
+        let dueDate = dueDatePicker.date
+        let notes = notesTextView.text
+        todo = ToDo(title: title, isComplete: isCompleted, dueDate: dueDate, notes: notes)
+    }
+    
+    static let dueDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
     /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+     
+     // Configure the cell...
 
         return cell
     }
@@ -101,5 +151,9 @@ class DetailToDoTableViewController: UITableViewController {
     @IBAction func isCompleteTapped(_ sender: UIButton) {
         isComplete.isSelected = !isComplete.isSelected
     }
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        updateDueDateLabel(date: dueDatePicker.date)
+    }
+    
     
 }

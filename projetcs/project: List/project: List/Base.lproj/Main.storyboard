@@ -18,13 +18,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="y6Z-O3-Dvl">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="y6Z-O3-Dvl" customClass="ToDoCell" customModule="project__List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y6Z-O3-Dvl" id="8TA-BA-18z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdp-vV-wBF">
+                                            <rect key="frame" x="70" y="12" width="289" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn7-wV-qgs">
+                                            <rect key="frame" x="16" y="6" width="39" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="ICC_emptyStar_2x"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped:" destination="y6Z-O3-Dvl" eventType="touchUpInside" id="6fX-OT-D3S"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="isCompleteButton" destination="nn7-wV-qgs" id="ch1-h4-tRe"/>
+                                    <outlet property="titleLabel" destination="sdp-vV-wBF" id="Fp8-b4-wzo"/>
+                                    <segue destination="bGF-aF-M1m" kind="showDetail" identifier="showDetails" id="Jby-A7-olf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kea-NB-tXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="65"/>
+            <point key="canvasLocation" x="420" y="64.31784107946028"/>
         </scene>
         <!--New ToDo-->
         <scene sceneID="1YF-Fi-2sQ">
@@ -62,7 +84,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="t" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXj-0Q-Oa1">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXj-0Q-Oa1">
                                                     <rect key="frame" x="81" y="8" width="278" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -81,7 +103,7 @@
                                                     <state key="selected" title="Button" image="ICC_filledStar_2x"/>
                                                     <state key="highlighted" image="ICC_filledStar_2x"/>
                                                     <connections>
-                                                        <action selector="isCompleteTapped:" destination="bGF-aF-M1m" eventType="touchUpInside" id="nYM-c8-meX"/>
+                                                        <action selector="isCompleteTapped:" destination="bGF-aF-M1m" eventType="primaryActionTriggered" id="MZn-WU-EOk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -109,38 +131,41 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8qK-KX-6tO">
-                                        <rect key="frame" x="0.0" y="299.5" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="185" id="8qK-KX-6tO">
+                                        <rect key="frame" x="0.0" y="299.5" width="375" height="185"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qK-KX-6tO" id="UGe-S6-6FH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZ7-uD-xdK">
-                                                    <rect key="frame" x="32" y="22" width="42" height="21"/>
+                                                    <rect key="frame" x="16" y="4" width="42" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qi-J5-FIf">
-                                                    <rect key="frame" x="301" y="22" width="42" height="21"/>
+                                                    <rect key="frame" x="317" y="0.0" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fIh-fx-zVx">
-                                                    <rect key="frame" x="-32" y="-59" width="375" height="162"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="565045476.33165205">
                                                         <!--2018-11-27 21:04:36 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="bGF-aF-M1m" eventType="primaryActionTriggered" id="PMh-nd-J5A"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="6qi-J5-FIf" firstAttribute="top" secondItem="UGe-S6-6FH" secondAttribute="topMargin" constant="11" id="GEJ-wZ-4VZ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="6qi-J5-FIf" secondAttribute="trailing" constant="16" id="TOc-3A-fEI"/>
-                                                <constraint firstItem="yZ7-uD-xdK" firstAttribute="leading" secondItem="UGe-S6-6FH" secondAttribute="leadingMargin" constant="16" id="Wb0-5h-jhn"/>
-                                                <constraint firstItem="yZ7-uD-xdK" firstAttribute="top" secondItem="UGe-S6-6FH" secondAttribute="topMargin" constant="11" id="q54-qE-l7R"/>
+                                                <constraint firstAttribute="trailing" secondItem="6qi-J5-FIf" secondAttribute="trailing" constant="16" id="9El-uF-X64"/>
+                                                <constraint firstItem="yZ7-uD-xdK" firstAttribute="top" secondItem="UGe-S6-6FH" secondAttribute="top" constant="4" id="PYZ-5p-a8u"/>
+                                                <constraint firstItem="6qi-J5-FIf" firstAttribute="top" secondItem="UGe-S6-6FH" secondAttribute="top" id="Vqw-dj-1v7"/>
+                                                <constraint firstItem="yZ7-uD-xdK" firstAttribute="leading" secondItem="UGe-S6-6FH" secondAttribute="leading" constant="16" id="aTK-Zv-gr6"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -209,4 +234,7 @@
         <image name="ICC_emptyStar_2x" width="75" height="75"/>
         <image name="ICC_filledStar_2x" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jby-A7-olf"/>
+    </inferredMetricsTieBreakers>
 </document>
