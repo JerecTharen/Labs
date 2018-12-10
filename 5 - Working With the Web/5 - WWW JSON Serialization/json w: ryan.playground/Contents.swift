@@ -1,8 +1,6 @@
 import UIKit
 import PlaygroundSupport
 
-// Part Two: JSON Serialization
-
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 extension URL {
@@ -63,12 +61,10 @@ func fetchItems(matching query: [String: String], completion: @escaping ([StoreI
             
         } else {
             print("Either no data was returned, or data was not serialized.")
-            
             completion(nil)
             return
         }
     }
-    
     task.resume()
 }
 
@@ -80,5 +76,5 @@ let query: [String: String] = [
 ]
 
 fetchItems(matching: query) { (items) in
-    print(items)
+    print(items as Any)
 }
