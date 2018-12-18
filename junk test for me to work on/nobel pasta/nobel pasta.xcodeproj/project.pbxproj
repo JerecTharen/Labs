@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB008DD221C7EE0400B1C407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008DD121C7EE0400B1C407 /* AppDelegate.swift */; };
+		CB008DD721C7EE0400B1C407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB008DD521C7EE0400B1C407 /* Main.storyboard */; };
+		CB008DD921C7EE0600B1C407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB008DD821C7EE0600B1C407 /* Assets.xcassets */; };
+		CB008DDC21C7EE0600B1C407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB008DDA21C7EE0600B1C407 /* LaunchScreen.storyboard */; };
+		CB008DE721C7EE0600B1C407 /* nobel_pastaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008DE621C7EE0600B1C407 /* nobel_pastaTests.swift */; };
+		CB008DF221C7EE0600B1C407 /* nobel_pastaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008DF121C7EE0600B1C407 /* nobel_pastaUITests.swift */; };
+		CB008E0221C7EEF800B1C407 /* detailPastaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0121C7EEF800B1C407 /* detailPastaTableViewController.swift */; };
+		CB008E0421C7EF1900B1C407 /* Pasta.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0321C7EF1900B1C407 /* Pasta.swift */; };
+		CB008E0621C7EF6800B1C407 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0521C7EF6800B1C407 /* NetworkController.swift */; };
+		CB008E0821C7EF7900B1C407 /* PastaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0721C7EF7900B1C407 /* PastaController.swift */; };
+		CB008E0A21C800D900B1C407 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0921C800D900B1C407 /* TableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB008DE321C7EE0600B1C407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB008DC621C7EE0400B1C407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB008DCD21C7EE0400B1C407;
+			remoteInfo = "nobel pasta";
+		};
+		CB008DEE21C7EE0600B1C407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB008DC621C7EE0400B1C407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB008DCD21C7EE0400B1C407;
+			remoteInfo = "nobel pasta";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB008DCE21C7EE0400B1C407 /* nobel pasta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nobel pasta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008DD121C7EE0400B1C407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB008DD621C7EE0400B1C407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB008DD821C7EE0600B1C407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB008DDB21C7EE0600B1C407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB008DDD21C7EE0600B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008DE221C7EE0600B1C407 /* nobel pastaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nobel pastaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008DE621C7EE0600B1C407 /* nobel_pastaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nobel_pastaTests.swift; sourceTree = "<group>"; };
+		CB008DE821C7EE0600B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008DED21C7EE0600B1C407 /* nobel pastaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nobel pastaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008DF121C7EE0600B1C407 /* nobel_pastaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nobel_pastaUITests.swift; sourceTree = "<group>"; };
+		CB008DF321C7EE0600B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008E0121C7EEF800B1C407 /* detailPastaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPastaTableViewController.swift; sourceTree = "<group>"; };
+		CB008E0321C7EF1900B1C407 /* Pasta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pasta.swift; sourceTree = "<group>"; };
+		CB008E0521C7EF6800B1C407 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		CB008E0721C7EF7900B1C407 /* PastaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaController.swift; sourceTree = "<group>"; };
+		CB008E0921C800D900B1C407 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB008DCB21C7EE0400B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DDF21C7EE0600B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DEA21C7EE0600B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB008DC521C7EE0400B1C407 = {
+			isa = PBXGroup;
+			children = (
+				CB008DD021C7EE0400B1C407 /* nobel pasta */,
+				CB008DE521C7EE0600B1C407 /* nobel pastaTests */,
+				CB008DF021C7EE0600B1C407 /* nobel pastaUITests */,
+				CB008DCF21C7EE0400B1C407 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB008DCF21C7EE0400B1C407 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB008DCE21C7EE0400B1C407 /* nobel pasta.app */,
+				CB008DE221C7EE0600B1C407 /* nobel pastaTests.xctest */,
+				CB008DED21C7EE0600B1C407 /* nobel pastaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB008DD021C7EE0400B1C407 /* nobel pasta */ = {
+			isa = PBXGroup;
+			children = (
+				CB008DD121C7EE0400B1C407 /* AppDelegate.swift */,
+				CB008E0121C7EEF800B1C407 /* detailPastaTableViewController.swift */,
+				CB008E0921C800D900B1C407 /* TableViewCell.swift */,
+				CB008DD521C7EE0400B1C407 /* Main.storyboard */,
+				CB008E0321C7EF1900B1C407 /* Pasta.swift */,
+				CB008E0521C7EF6800B1C407 /* NetworkController.swift */,
+				CB008E0721C7EF7900B1C407 /* PastaController.swift */,
+				CB008DD821C7EE0600B1C407 /* Assets.xcassets */,
+				CB008DDA21C7EE0600B1C407 /* LaunchScreen.storyboard */,
+				CB008DDD21C7EE0600B1C407 /* Info.plist */,
+			);
+			path = "nobel pasta";
+			sourceTree = "<group>";
+		};
+		CB008DE521C7EE0600B1C407 /* nobel pastaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB008DE621C7EE0600B1C407 /* nobel_pastaTests.swift */,
+				CB008DE821C7EE0600B1C407 /* Info.plist */,
+			);
+			path = "nobel pastaTests";
+			sourceTree = "<group>";
+		};
+		CB008DF021C7EE0600B1C407 /* nobel pastaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB008DF121C7EE0600B1C407 /* nobel_pastaUITests.swift */,
+				CB008DF321C7EE0600B1C407 /* Info.plist */,
+			);
+			path = "nobel pastaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB008DCD21C7EE0400B1C407 /* nobel pasta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008DF621C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pasta" */;
+			buildPhases = (
+				CB008DCA21C7EE0400B1C407 /* Sources */,
+				CB008DCB21C7EE0400B1C407 /* Frameworks */,
+				CB008DCC21C7EE0400B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nobel pasta";
+			productName = "nobel pasta";
+			productReference = CB008DCE21C7EE0400B1C407 /* nobel pasta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB008DE121C7EE0600B1C407 /* nobel pastaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008DF921C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pastaTests" */;
+			buildPhases = (
+				CB008DDE21C7EE0600B1C407 /* Sources */,
+				CB008DDF21C7EE0600B1C407 /* Frameworks */,
+				CB008DE021C7EE0600B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB008DE421C7EE0600B1C407 /* PBXTargetDependency */,
+			);
+			name = "nobel pastaTests";
+			productName = "nobel pastaTests";
+			productReference = CB008DE221C7EE0600B1C407 /* nobel pastaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB008DEC21C7EE0600B1C407 /* nobel pastaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008DFC21C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pastaUITests" */;
+			buildPhases = (
+				CB008DE921C7EE0600B1C407 /* Sources */,
+				CB008DEA21C7EE0600B1C407 /* Frameworks */,
+				CB008DEB21C7EE0600B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB008DEF21C7EE0600B1C407 /* PBXTargetDependency */,
+			);
+			name = "nobel pastaUITests";
+			productName = "nobel pastaUITests";
+			productReference = CB008DED21C7EE0600B1C407 /* nobel pastaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB008DC621C7EE0400B1C407 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tyler Donohue";
+				TargetAttributes = {
+					CB008DCD21C7EE0400B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CB008DE121C7EE0600B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CB008DCD21C7EE0400B1C407;
+					};
+					CB008DEC21C7EE0600B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CB008DCD21C7EE0400B1C407;
+					};
+				};
+			};
+			buildConfigurationList = CB008DC921C7EE0400B1C407 /* Build configuration list for PBXProject "nobel pasta" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB008DC521C7EE0400B1C407;
+			productRefGroup = CB008DCF21C7EE0400B1C407 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB008DCD21C7EE0400B1C407 /* nobel pasta */,
+				CB008DE121C7EE0600B1C407 /* nobel pastaTests */,
+				CB008DEC21C7EE0600B1C407 /* nobel pastaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB008DCC21C7EE0400B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008DDC21C7EE0600B1C407 /* LaunchScreen.storyboard in Resources */,
+				CB008DD921C7EE0600B1C407 /* Assets.xcassets in Resources */,
+				CB008DD721C7EE0400B1C407 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DE021C7EE0600B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DEB21C7EE0600B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB008DCA21C7EE0400B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008E0621C7EF6800B1C407 /* NetworkController.swift in Sources */,
+				CB008DD221C7EE0400B1C407 /* AppDelegate.swift in Sources */,
+				CB008E0221C7EEF800B1C407 /* detailPastaTableViewController.swift in Sources */,
+				CB008E0A21C800D900B1C407 /* TableViewCell.swift in Sources */,
+				CB008E0421C7EF1900B1C407 /* Pasta.swift in Sources */,
+				CB008E0821C7EF7900B1C407 /* PastaController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DDE21C7EE0600B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008DE721C7EE0600B1C407 /* nobel_pastaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008DE921C7EE0600B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008DF221C7EE0600B1C407 /* nobel_pastaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB008DE421C7EE0600B1C407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB008DCD21C7EE0400B1C407 /* nobel pasta */;
+			targetProxy = CB008DE321C7EE0600B1C407 /* PBXContainerItemProxy */;
+		};
+		CB008DEF21C7EE0600B1C407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB008DCD21C7EE0400B1C407 /* nobel pasta */;
+			targetProxy = CB008DEE21C7EE0600B1C407 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB008DD521C7EE0400B1C407 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB008DD621C7EE0400B1C407 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB008DDA21C7EE0600B1C407 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB008DDB21C7EE0600B1C407 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB008DF421C7EE0600B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB008DF521C7EE0600B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB008DF721C7EE0600B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pasta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pasta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB008DF821C7EE0600B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pasta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pasta";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB008DFA21C7EE0600B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pastaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pastaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nobel pasta.app/nobel pasta";
+			};
+			name = Debug;
+		};
+		CB008DFB21C7EE0600B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pastaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pastaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nobel pasta.app/nobel pasta";
+			};
+			name = Release;
+		};
+		CB008DFD21C7EE0600B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pastaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pastaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "nobel pasta";
+			};
+			name = Debug;
+		};
+		CB008DFE21C7EE0600B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "nobel pastaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TyDon.nobel-pastaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "nobel pasta";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB008DC921C7EE0400B1C407 /* Build configuration list for PBXProject "nobel pasta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008DF421C7EE0600B1C407 /* Debug */,
+				CB008DF521C7EE0600B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008DF621C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pasta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008DF721C7EE0600B1C407 /* Debug */,
+				CB008DF821C7EE0600B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008DF921C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pastaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008DFA21C7EE0600B1C407 /* Debug */,
+				CB008DFB21C7EE0600B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008DFC21C7EE0600B1C407 /* Build configuration list for PBXNativeTarget "nobel pastaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008DFD21C7EE0600B1C407 /* Debug */,
+				CB008DFE21C7EE0600B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB008DC621C7EE0400B1C407 /* Project object */;
+}
