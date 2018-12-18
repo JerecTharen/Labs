@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Pasta: Decodable {
+struct Pasta: Codable {
 
     let recipeID: String
     let title: String
@@ -17,7 +17,7 @@ struct Pasta: Decodable {
     let sourceURL: String
 
     enum CodingKeys: String, CodingKey {
-        case recipiID = "recipe_id"
+        case recipeID = "recipe_id"
         case title = "title"
         case imageURL = "image_url"
         case ingredients = "ingredients"
@@ -27,11 +27,10 @@ struct Pasta: Decodable {
     init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.recipeID = try valueContainer.decode(String.self, forKey: CodingKeys.recipiID)
+        self.recipeID = try valueContainer.decode(String.self, forKey: CodingKeys.recipeID)
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)
         self.imageURL = try valueContainer.decode(URL.self, forKey: CodingKeys.imageURL)
         self.ingredients = try valueContainer.decode([String?].self, forKey: CodingKeys.ingredients)
         self.sourceURL = try valueContainer.decode(String.self, forKey: CodingKeys.sourceURL)
-
     }
 }
