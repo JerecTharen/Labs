@@ -26,7 +26,6 @@ struct Pasta: Codable {
 
     init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
-
         self.recipeID = try valueContainer.decode(String.self, forKey: CodingKeys.recipeID)
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)
         self.imageURL = try valueContainer.decode(URL.self, forKey: CodingKeys.imageURL)

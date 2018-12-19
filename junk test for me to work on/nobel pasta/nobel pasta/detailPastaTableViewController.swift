@@ -9,10 +9,12 @@
 import UIKit
 
 class detailPastaTableViewController: UITableViewController, UISearchBarDelegate {
+    @IBOutlet weak var searchBar: UISearchBar!
     
       var pasta: [Pasta?] = [] {
         didSet {
             DispatchQueue.main.sync {
+                searchBar.text = ""
                 
             }
         }
@@ -20,7 +22,6 @@ class detailPastaTableViewController: UITableViewController, UISearchBarDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
     }
 

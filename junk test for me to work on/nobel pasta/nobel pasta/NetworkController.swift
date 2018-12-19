@@ -18,7 +18,6 @@ class NetworkController {
         }
         
         let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
             let jsonDecoder = JSONDecoder()
             
             if let error = error {
@@ -39,7 +38,6 @@ class NetworkController {
                 do {
                     let pasta = try jsonDecoder.decode(Pasta.self, from: data)
                     completion(pasta)
-                    
                 } catch(let error) {
                     print("ERROR: \(error)")
                     completion(nil)
