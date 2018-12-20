@@ -24,7 +24,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="123" id="uf6-7G-0D0" customClass="TableViewCell" customModule="nobel_pasta" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="123" id="uf6-7G-0D0" customClass="TableViewCell" customModule="nobel_pasta" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uf6-7G-0D0" id="WEM-q3-yMa">
@@ -125,7 +125,6 @@
                         <outlet property="moreInfoImage" destination="zGb-wi-oYV" id="oyp-SR-Cyx"/>
                         <outlet property="moreInfoIngrediantsLabel" destination="6MD-mN-zRS" id="EKp-N0-tvj"/>
                         <outlet property="moreInfoTitleLabel" destination="5DC-CK-xyB" id="Dep-RF-dt9"/>
-                        <outlet property="moreInfoURL" destination="gTS-BD-1pP" id="vt1-6n-S73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9o-Z1-Jxa" userLabel="First Responder" sceneMemberID="firstResponder"/>

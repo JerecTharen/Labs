@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NetworkController {
+struct NetworkController {
     
     static func fetchPasta(urlString: String, completion: @escaping (Pasta?) -> Void) {
         guard let url = URL(string: urlString) else {

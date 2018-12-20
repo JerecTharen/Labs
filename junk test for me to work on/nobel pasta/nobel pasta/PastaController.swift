@@ -10,12 +10,33 @@ import Foundation
 
 
 class PastaController {
-    static let baseURL = "https://www.food2fork.com/api/search?key=f3230e9056a3fab88f83ce336204b9bf&q=chicken%20breast&page=2"
     
-    static func getPasta(searchTerm: String, completion: @escaping (Pasta?) -> Void) {
-        let searchURL = baseURL + searchTerm.lowercased()
-        _ = NetworkController.fetchPasta(urlString: searchURL, completion: { (pasta) in
-            completion(pasta)
-        })
+    func getPasta(matching query: [String: String], completion: @escaping (Pasta?) -> Void) {
+        
+        let baseURL = URL(string: "https://www.food2fork.com/api/search?key=f3230e9056a3fab88f83ce336204b9bf")!
+        
+        guard let url = baseURL.withQueries(query) else {
+            
+            completion(nil)
+            print("Unable to build URL.")
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data,
+                let rawJSON = try JSONSerialization.jsonObject(with: data),
+                let json = rawJSON as? [String: Any],
+                let resultsArray = json["results"] as? [[String: Any]] {
+                
+                pastas = resultsArray.compactMap { Pasta(from: $0 as! Decoder) }
+                completion(pastas)
+
+            } else {
+                print("Either no data was returned, or data was not serialized.")
+                completion(nil)
+                return
+            }
+        }
+        task.resume()
     }
 }

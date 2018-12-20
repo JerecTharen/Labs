@@ -38,8 +38,6 @@ class MoreInfoViewController: UIViewController {
             moreInfoURL.text = pasta.sourceURL
             moreInfoIngrediantsLabel.text = pasta.ingredients.compactMap { $0 }.joined(separator: ", ")
             
-            
-            
         }
     }
     

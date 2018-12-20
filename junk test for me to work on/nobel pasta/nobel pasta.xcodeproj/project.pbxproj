@@ -19,6 +19,7 @@
 		CB008E0821C7EF7900B1C407 /* PastaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0721C7EF7900B1C407 /* PastaController.swift */; };
 		CB008E0A21C800D900B1C407 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0921C800D900B1C407 /* TableViewCell.swift */; };
 		CB008E8C21CA902C00B1C407 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E8B21CA902C00B1C407 /* MoreInfoViewController.swift */; };
+		CB008E8E21CBE66C00B1C407 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E8D21CBE66C00B1C407 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CB008E0721C7EF7900B1C407 /* PastaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastaController.swift; sourceTree = "<group>"; };
 		CB008E0921C800D900B1C407 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CB008E8B21CA902C00B1C407 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		CB008E8D21CBE66C00B1C407 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				CB008E0321C7EF1900B1C407 /* Pasta.swift */,
 				CB008E0521C7EF6800B1C407 /* NetworkController.swift */,
 				CB008E0721C7EF7900B1C407 /* PastaController.swift */,
+				CB008E8D21CBE66C00B1C407 /* Helpers.swift */,
 				CB008DD521C7EE0400B1C407 /* Main.storyboard */,
 				CB008DD821C7EE0600B1C407 /* Assets.xcassets */,
 				CB008DDA21C7EE0600B1C407 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				CB008E0621C7EF6800B1C407 /* NetworkController.swift in Sources */,
 				CB008DD221C7EE0400B1C407 /* AppDelegate.swift in Sources */,
 				CB008E0221C7EEF800B1C407 /* detailPastaTableViewController.swift in Sources */,
+				CB008E8E21CBE66C00B1C407 /* Helpers.swift in Sources */,
 				CB008E8C21CA902C00B1C407 /* MoreInfoViewController.swift in Sources */,
 				CB008E0A21C800D900B1C407 /* TableViewCell.swift in Sources */,
 				CB008E0421C7EF1900B1C407 /* Pasta.swift in Sources */,
