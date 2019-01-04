@@ -22,9 +22,10 @@ struct Pasta: Codable {
         case imageURL = "image_url"
         case ingredients = "ingredients"
         case sourceURL = "source_url"
+        
     }
 
-    init(from decoder: Decoder) throws {
+    init(json decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
         self.recipeID = try valueContainer.decode(String.self, forKey: CodingKeys.recipeID)
         self.title = try valueContainer.decode(String.self, forKey: CodingKeys.title)

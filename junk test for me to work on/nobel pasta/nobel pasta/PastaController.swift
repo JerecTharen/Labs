@@ -11,9 +11,9 @@ import Foundation
 
 class PastaController {
     
-    func getPasta(matching query: [String: String], completion: @escaping (Pasta?) -> Void) {
+    static func getPasta(matching query: [String: String], completion: @escaping ([Pasta]?) -> Void) {
         
-        let baseURL = URL(string: "https://www.food2fork.com/api/search?key=f3230e9056a3fab88f83ce336204b9bf")!
+        let baseURL = URL(string: "https://www.food2fork.com/api/search?key=f3230e9056a3fab88f83ce336204b9bf&q=pasta")!
         
         guard let url = baseURL.withQueries(query) else {
             
@@ -23,14 +23,18 @@ class PastaController {
         }
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
             if let data = data,
-                let rawJSON = try JSONSerialization.jsonObject(with: data),
-                let json = rawJSON as? [String: Any],
-                let resultsArray = json["results"] as? [[String: Any]] {
+                let rawJSON = try? JSONSerialization.jsonObject(with: data){//},
+             
+                var pastaArray = rawJSON["recipies"] as? [[String: Any]] {
                 
-                pastas = resultsArray.compactMap { Pasta(from: $0 as! Decoder) }
-                completion(pastas)
+                let pastas = pastaArray.compactMap { Pasta(json: $0) }
+               // let pastas = Pasta(json: rawJSON)
 
+        //        completion(pastas)
+                completion(nil)
+                
             } else {
                 print("Either no data was returned, or data was not serialized.")
                 completion(nil)
@@ -40,3 +44,4 @@ class PastaController {
         task.resume()
     }
 }
+

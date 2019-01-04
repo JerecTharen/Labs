@@ -10,6 +10,7 @@ import UIKit
 
 class detailPastaTableViewController: UITableViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
     var pasta: [Pasta?] = [] {
         didSet {
@@ -25,7 +26,7 @@ class detailPastaTableViewController: UITableViewController, UISearchBarDelegate
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
     }
     
     // MARK: - Table view data source
@@ -34,7 +35,7 @@ class detailPastaTableViewController: UITableViewController, UISearchBarDelegate
         
         let pastaItem = pasta[indexPath.row]
         
-        cell.textLabel?.text = pastaItem
+        cell.textLabel?.text = pastaItem?.title
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,13 +56,14 @@ class detailPastaTableViewController: UITableViewController, UISearchBarDelegate
 }
 
 extension detailPastaTableViewController {
-    func searchBarButtonTapped(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchPasta = searchBar.text else {
             print(">:(")
             return
         }
         
-        PastaController.getPasta(searchTerm: searchPasta) { (pasta) in
+        var pastaDic = ["key": "f3230e9056a3fab88f83ce336204b9bf", "q": searchPasta]
+        PastaController.getPasta(matching: pastaDic) { (pasta) in
             guard let pasta = pasta else {
                 self.resetForm()
                 

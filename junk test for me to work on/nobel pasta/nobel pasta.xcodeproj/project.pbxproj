@@ -20,6 +20,7 @@
 		CB008E0A21C800D900B1C407 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E0921C800D900B1C407 /* TableViewCell.swift */; };
 		CB008E8C21CA902C00B1C407 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E8B21CA902C00B1C407 /* MoreInfoViewController.swift */; };
 		CB008E8E21CBE66C00B1C407 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008E8D21CBE66C00B1C407 /* Helpers.swift */; };
+		CB008F5221DE644800B1C407 /* f2fAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008F5121DE644800B1C407 /* f2fAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CB008E0921C800D900B1C407 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CB008E8B21CA902C00B1C407 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		CB008E8D21CBE66C00B1C407 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		CB008F5121DE644800B1C407 /* f2fAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = f2fAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				CB008E0921C800D900B1C407 /* TableViewCell.swift */,
 				CB008E8B21CA902C00B1C407 /* MoreInfoViewController.swift */,
 				CB008E0321C7EF1900B1C407 /* Pasta.swift */,
+				CB008F5121DE644800B1C407 /* f2fAPI.swift */,
 				CB008E0521C7EF6800B1C407 /* NetworkController.swift */,
 				CB008E0721C7EF7900B1C407 /* PastaController.swift */,
 				CB008E8D21CBE66C00B1C407 /* Helpers.swift */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB008E0621C7EF6800B1C407 /* NetworkController.swift in Sources */,
+				CB008F5221DE644800B1C407 /* f2fAPI.swift in Sources */,
 				CB008DD221C7EE0400B1C407 /* AppDelegate.swift in Sources */,
 				CB008E0221C7EEF800B1C407 /* detailPastaTableViewController.swift in Sources */,
 				CB008E8E21CBE66C00B1C407 /* Helpers.swift in Sources */,

@@ -73,6 +73,9 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="delegate" destination="2OP-MJ-Tub" id="bw8-93-OR7"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8LQ-oF-sBV"/>
                     <connections>

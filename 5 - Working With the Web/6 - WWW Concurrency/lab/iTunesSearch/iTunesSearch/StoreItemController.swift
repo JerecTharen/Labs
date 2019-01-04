@@ -17,7 +17,7 @@ struct StoreItemController {
         guard let url = baseURL.withQueries(query) else {
             
             completion(nil)
-            print("Unable to build URL with supplied queries.")
+            print("Unable to build URL >:(.")
             return
         }
         
