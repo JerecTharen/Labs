@@ -26,10 +26,25 @@ class MenuController {
         var components = URLComponents(url: initialMenuURL, resolvingAgainstBaseURL: true)!
         components.queryItems = [URLQueryItem(name: "category", value: categoryName)]
         let menuURL = components.url!
+        let task = URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
+            
+        }
+        task.resume()
     }
     
     func submitOrder(forMenuIDs menuIds: [Int], completion: @escaping (Int?) -> Void) {
         
         let orderURL = baseURL.appendingPathComponent("order")
+        var request = URLRequest(url: orderURL)
+        request.httpMethod = "POST"
+        request.setValue("application/jsobn", forHTTPHeaderField: "Content-Type")
+        let data: [String: [Int]] = ["menuIds": menuIds]
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(data)
+        request.httpBody = jsonData
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+        }
+        task.resume()
     }
 }

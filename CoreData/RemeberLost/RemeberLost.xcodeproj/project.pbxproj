@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB008FB321E3B76600B1C407 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FB221E3B76600B1C407 /* AppDelegate.swift */; };
+		CB008FB821E3B76600B1C407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB008FB621E3B76600B1C407 /* Main.storyboard */; };
+		CB008FBB21E3B76600B1C407 /* RemeberLost.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB008FB921E3B76600B1C407 /* RemeberLost.xcdatamodeld */; };
+		CB008FBD21E3B76700B1C407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB008FBC21E3B76700B1C407 /* Assets.xcassets */; };
+		CB008FC021E3B76700B1C407 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB008FBE21E3B76700B1C407 /* LaunchScreen.storyboard */; };
+		CB008FCB21E3B76700B1C407 /* RemeberLostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FCA21E3B76700B1C407 /* RemeberLostTests.swift */; };
+		CB008FD621E3B76700B1C407 /* RemeberLostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FD521E3B76700B1C407 /* RemeberLostUITests.swift */; };
+		CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE321E3B8B600B1C407 /* TableViewController.swift */; };
+		CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */; };
+		CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB008FC721E3B76700B1C407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB008FA721E3B76600B1C407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB008FAE21E3B76600B1C407;
+			remoteInfo = RemeberLost;
+		};
+		CB008FD221E3B76700B1C407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB008FA721E3B76600B1C407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB008FAE21E3B76600B1C407;
+			remoteInfo = RemeberLost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB008FAF21E3B76600B1C407 /* RemeberLost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemeberLost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008FB221E3B76600B1C407 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB008FB721E3B76600B1C407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB008FBA21E3B76600B1C407 /* RemeberLost.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemeberLost.xcdatamodel; sourceTree = "<group>"; };
+		CB008FBC21E3B76700B1C407 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB008FBF21E3B76700B1C407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB008FC121E3B76700B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008FC621E3B76700B1C407 /* RemeberLostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemeberLostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008FCA21E3B76700B1C407 /* RemeberLostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemeberLostTests.swift; sourceTree = "<group>"; };
+		CB008FCC21E3B76700B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008FD121E3B76700B1C407 /* RemeberLostUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemeberLostUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB008FD521E3B76700B1C407 /* RemeberLostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemeberLostUITests.swift; sourceTree = "<group>"; };
+		CB008FD721E3B76700B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB008FE321E3B8B600B1C407 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController2.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB008FAC21E3B76600B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FC321E3B76700B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FCE21E3B76700B1C407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB008FA621E3B76600B1C407 = {
+			isa = PBXGroup;
+			children = (
+				CB008FB121E3B76600B1C407 /* RemeberLost */,
+				CB008FC921E3B76700B1C407 /* RemeberLostTests */,
+				CB008FD421E3B76700B1C407 /* RemeberLostUITests */,
+				CB008FB021E3B76600B1C407 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB008FB021E3B76600B1C407 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB008FAF21E3B76600B1C407 /* RemeberLost.app */,
+				CB008FC621E3B76700B1C407 /* RemeberLostTests.xctest */,
+				CB008FD121E3B76700B1C407 /* RemeberLostUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB008FB121E3B76600B1C407 /* RemeberLost */ = {
+			isa = PBXGroup;
+			children = (
+				CB008FB221E3B76600B1C407 /* AppDelegate.swift */,
+				CB008FB621E3B76600B1C407 /* Main.storyboard */,
+				CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */,
+				CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */,
+				CB008FE321E3B8B600B1C407 /* TableViewController.swift */,
+				CB008FBC21E3B76700B1C407 /* Assets.xcassets */,
+				CB008FBE21E3B76700B1C407 /* LaunchScreen.storyboard */,
+				CB008FC121E3B76700B1C407 /* Info.plist */,
+				CB008FB921E3B76600B1C407 /* RemeberLost.xcdatamodeld */,
+			);
+			path = RemeberLost;
+			sourceTree = "<group>";
+		};
+		CB008FC921E3B76700B1C407 /* RemeberLostTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB008FCA21E3B76700B1C407 /* RemeberLostTests.swift */,
+				CB008FCC21E3B76700B1C407 /* Info.plist */,
+			);
+			path = RemeberLostTests;
+			sourceTree = "<group>";
+		};
+		CB008FD421E3B76700B1C407 /* RemeberLostUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB008FD521E3B76700B1C407 /* RemeberLostUITests.swift */,
+				CB008FD721E3B76700B1C407 /* Info.plist */,
+			);
+			path = RemeberLostUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB008FAE21E3B76600B1C407 /* RemeberLost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008FDA21E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLost" */;
+			buildPhases = (
+				CB008FAB21E3B76600B1C407 /* Sources */,
+				CB008FAC21E3B76600B1C407 /* Frameworks */,
+				CB008FAD21E3B76600B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemeberLost;
+			productName = RemeberLost;
+			productReference = CB008FAF21E3B76600B1C407 /* RemeberLost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB008FC521E3B76700B1C407 /* RemeberLostTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008FDD21E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLostTests" */;
+			buildPhases = (
+				CB008FC221E3B76700B1C407 /* Sources */,
+				CB008FC321E3B76700B1C407 /* Frameworks */,
+				CB008FC421E3B76700B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB008FC821E3B76700B1C407 /* PBXTargetDependency */,
+			);
+			name = RemeberLostTests;
+			productName = RemeberLostTests;
+			productReference = CB008FC621E3B76700B1C407 /* RemeberLostTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB008FD021E3B76700B1C407 /* RemeberLostUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB008FE021E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLostUITests" */;
+			buildPhases = (
+				CB008FCD21E3B76700B1C407 /* Sources */,
+				CB008FCE21E3B76700B1C407 /* Frameworks */,
+				CB008FCF21E3B76700B1C407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB008FD321E3B76700B1C407 /* PBXTargetDependency */,
+			);
+			name = RemeberLostUITests;
+			productName = RemeberLostUITests;
+			productReference = CB008FD121E3B76700B1C407 /* RemeberLostUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB008FA721E3B76600B1C407 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tyler Donohue";
+				TargetAttributes = {
+					CB008FAE21E3B76600B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CB008FC521E3B76700B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CB008FAE21E3B76600B1C407;
+					};
+					CB008FD021E3B76700B1C407 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CB008FAE21E3B76600B1C407;
+					};
+				};
+			};
+			buildConfigurationList = CB008FAA21E3B76600B1C407 /* Build configuration list for PBXProject "RemeberLost" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB008FA621E3B76600B1C407;
+			productRefGroup = CB008FB021E3B76600B1C407 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB008FAE21E3B76600B1C407 /* RemeberLost */,
+				CB008FC521E3B76700B1C407 /* RemeberLostTests */,
+				CB008FD021E3B76700B1C407 /* RemeberLostUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB008FAD21E3B76600B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008FC021E3B76700B1C407 /* LaunchScreen.storyboard in Resources */,
+				CB008FBD21E3B76700B1C407 /* Assets.xcassets in Resources */,
+				CB008FB821E3B76600B1C407 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FC421E3B76700B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FCF21E3B76700B1C407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB008FAB21E3B76600B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */,
+				CB008FBB21E3B76600B1C407 /* RemeberLost.xcdatamodeld in Sources */,
+				CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */,
+				CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */,
+				CB008FB321E3B76600B1C407 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FC221E3B76700B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008FCB21E3B76700B1C407 /* RemeberLostTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB008FCD21E3B76700B1C407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB008FD621E3B76700B1C407 /* RemeberLostUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB008FC821E3B76700B1C407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB008FAE21E3B76600B1C407 /* RemeberLost */;
+			targetProxy = CB008FC721E3B76700B1C407 /* PBXContainerItemProxy */;
+		};
+		CB008FD321E3B76700B1C407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB008FAE21E3B76600B1C407 /* RemeberLost */;
+			targetProxy = CB008FD221E3B76700B1C407 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB008FB621E3B76600B1C407 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB008FB721E3B76600B1C407 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB008FBE21E3B76700B1C407 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB008FBF21E3B76700B1C407 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB008FD821E3B76700B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB008FD921E3B76700B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB008FDB21E3B76700B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB008FDC21E3B76700B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB008FDE21E3B76700B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemeberLost.app/RemeberLost";
+			};
+			name = Debug;
+		};
+		CB008FDF21E3B76700B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLostTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLostTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemeberLost.app/RemeberLost";
+			};
+			name = Release;
+		};
+		CB008FE121E3B76700B1C407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLostUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLostUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemeberLost;
+			};
+			name = Debug;
+		};
+		CB008FE221E3B76700B1C407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RemeberLostUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.RemeberLostUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RemeberLost;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB008FAA21E3B76600B1C407 /* Build configuration list for PBXProject "RemeberLost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008FD821E3B76700B1C407 /* Debug */,
+				CB008FD921E3B76700B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008FDA21E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008FDB21E3B76700B1C407 /* Debug */,
+				CB008FDC21E3B76700B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008FDD21E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLostTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008FDE21E3B76700B1C407 /* Debug */,
+				CB008FDF21E3B76700B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB008FE021E3B76700B1C407 /* Build configuration list for PBXNativeTarget "RemeberLostUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB008FE121E3B76700B1C407 /* Debug */,
+				CB008FE221E3B76700B1C407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB008FB921E3B76600B1C407 /* RemeberLost.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB008FBA21E3B76600B1C407 /* RemeberLost.xcdatamodel */,
+			);
+			currentVersion = CB008FBA21E3B76600B1C407 /* RemeberLost.xcdatamodel */;
+			path = RemeberLost.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CB008FA721E3B76600B1C407 /* Project object */;
+}
