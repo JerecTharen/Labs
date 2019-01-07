@@ -16,6 +16,13 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let fetchRequest: NSFetchRequest<Entity> = Entity.fetchRequest()
+        
+        do {
+            let otherEntity = try PersistanceService.context.fetch(fetchRequest)
+        self.entity = otherEntity
+        self.tableView.reloadData()
+        } catch {}
 
     }
 
@@ -34,7 +41,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = entity[indexPath.row].name
-        cell.detailTextLabel?.text = ""
         
         return cell
     }
@@ -50,6 +56,8 @@ class TableViewController: UITableViewController {
             let onject = Entity(context: PersistanceService.context)
             onject.name = name
             PersistanceService.saveContext()
+            self.entity.append(onject)
+            self.tableView.reloadData()
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
