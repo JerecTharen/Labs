@@ -17,6 +17,7 @@
 		CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE321E3B8B600B1C407 /* TableViewController.swift */; };
 		CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */; };
 		CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */; };
+		CB008FEA21E3C92700B1C407 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE921E3C92700B1C407 /* PersistanceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CB008FE321E3B8B600B1C407 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController2.swift; sourceTree = "<group>"; };
+		CB008FE921E3C92700B1C407 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */,
 				CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */,
 				CB008FE321E3B8B600B1C407 /* TableViewController.swift */,
+				CB008FE921E3C92700B1C407 /* PersistanceService.swift */,
 				CB008FBC21E3B76700B1C407 /* Assets.xcassets */,
 				CB008FBE21E3B76700B1C407 /* LaunchScreen.storyboard */,
 				CB008FC121E3B76700B1C407 /* Info.plist */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */,
+				CB008FEA21E3C92700B1C407 /* PersistanceService.swift in Sources */,
 				CB008FBB21E3B76600B1C407 /* RemeberLost.xcdatamodeld in Sources */,
 				CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */,
 				CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */,
