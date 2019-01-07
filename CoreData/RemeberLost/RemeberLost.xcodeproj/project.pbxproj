@@ -15,9 +15,9 @@
 		CB008FCB21E3B76700B1C407 /* RemeberLostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FCA21E3B76700B1C407 /* RemeberLostTests.swift */; };
 		CB008FD621E3B76700B1C407 /* RemeberLostUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FD521E3B76700B1C407 /* RemeberLostUITests.swift */; };
 		CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE321E3B8B600B1C407 /* TableViewController.swift */; };
-		CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */; };
-		CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */; };
 		CB008FEA21E3C92700B1C407 /* PersistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FE921E3C92700B1C407 /* PersistanceService.swift */; };
+		CB008FED21E3D17500B1C407 /* Entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FEB21E3D17500B1C407 /* Entity+CoreDataClass.swift */; };
+		CB008FEE21E3D17500B1C407 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB008FEC21E3D17500B1C407 /* Entity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +52,9 @@
 		CB008FD521E3B76700B1C407 /* RemeberLostUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemeberLostUITests.swift; sourceTree = "<group>"; };
 		CB008FD721E3B76700B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB008FE321E3B8B600B1C407 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
-		CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController2.swift; sourceTree = "<group>"; };
 		CB008FE921E3C92700B1C407 /* PersistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceService.swift; sourceTree = "<group>"; };
+		CB008FEB21E3D17500B1C407 /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB008FEC21E3D17500B1C407 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +105,10 @@
 		CB008FB121E3B76600B1C407 /* RemeberLost */ = {
 			isa = PBXGroup;
 			children = (
+				CB008FEB21E3D17500B1C407 /* Entity+CoreDataClass.swift */,
+				CB008FEC21E3D17500B1C407 /* Entity+CoreDataProperties.swift */,
 				CB008FB221E3B76600B1C407 /* AppDelegate.swift */,
 				CB008FB621E3B76600B1C407 /* Main.storyboard */,
-				CB008FE721E3BEA700B1C407 /* DetailTableViewController2.swift */,
-				CB008FE521E3BD6A00B1C407 /* DetailTableViewController.swift */,
 				CB008FE321E3B8B600B1C407 /* TableViewController.swift */,
 				CB008FE921E3C92700B1C407 /* PersistanceService.swift */,
 				CB008FBC21E3B76700B1C407 /* Assets.xcassets */,
@@ -268,11 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB008FE621E3BD6A00B1C407 /* DetailTableViewController.swift in Sources */,
+				CB008FEE21E3D17500B1C407 /* Entity+CoreDataProperties.swift in Sources */,
 				CB008FEA21E3C92700B1C407 /* PersistanceService.swift in Sources */,
 				CB008FBB21E3B76600B1C407 /* RemeberLost.xcdatamodeld in Sources */,
 				CB008FE421E3B8B600B1C407 /* TableViewController.swift in Sources */,
-				CB008FE821E3BEA700B1C407 /* DetailTableViewController2.swift in Sources */,
+				CB008FED21E3D17500B1C407 /* Entity+CoreDataClass.swift in Sources */,
 				CB008FB321E3B76600B1C407 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

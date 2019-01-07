@@ -11,23 +11,11 @@ import CoreData
 
 class TableViewController: UITableViewController {
     
-    var info = [String]()
+    var entity: [Entity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = PersistanceService.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
         
-        
-        do {
-            try context.save()
-        } catch {
-            print("saving")
-        }
-        
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
-        request.returnsObjectsAsFaults = false
 
     }
 
@@ -45,7 +33,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = ""
+        cell.textLabel?.text = entity[indexPath.row].name
         cell.detailTextLabel?.text = ""
         
         return cell
@@ -59,6 +47,9 @@ class TableViewController: UITableViewController {
         let action = UIAlertAction(title: "post", style: .default) { (_) in
             let name = alert.textFields!.first!.text!
             print(name)
+            let onject = Entity(context: PersistanceService.context)
+            onject.name = name
+            PersistanceService.saveContext()
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
