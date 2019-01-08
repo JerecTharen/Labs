@@ -35,7 +35,7 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return entity.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +50,7 @@ class TableViewController: UITableViewController {
         alert.addTextField { (textField) in
             textField.placeholder = "Name"
         }
-        let action = UIAlertAction(title: "post", style: .default) { (_) in
+        let action = UIAlertAction(title: "Add", style: .default) { (_) in
             let name = alert.textFields!.first!.text!
             print(name)
             let onject = Entity(context: PersistanceService.context)
