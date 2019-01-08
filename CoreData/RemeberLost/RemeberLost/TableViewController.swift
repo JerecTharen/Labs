@@ -45,11 +45,20 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.entity.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func onPlusTapped() {
         let alert = UIAlertController(title: "add", message: nil, preferredStyle: .alert)
+        
         alert.addTextField { (textField) in
-            textField.placeholder = "Name"
+            textField.placeholder = "Data"
         }
+        let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
         let action = UIAlertAction(title: "Add", style: .default) { (_) in
             let name = alert.textFields!.first!.text!
             print(name)
@@ -60,8 +69,9 @@ class TableViewController: UITableViewController {
             self.tableView.reloadData()
         }
         alert.addAction(action)
+        alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
        
     }
-
+   
 }
