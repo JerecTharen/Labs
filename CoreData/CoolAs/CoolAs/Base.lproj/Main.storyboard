@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Cool Table View Controller-->
         <scene sceneID="o1D-rg-RJg">
             <objects>
-                <tableViewController id="4Aw-sv-ydH" sceneMemberID="viewController">
+                <tableViewController id="4Aw-sv-ydH" customClass="CoolTableViewController" customModule="CoolAs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fk3-VT-OOM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,19 +54,23 @@
                     <navigationItem key="navigationItem" id="saS-10-lwh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KtF-VB-LTT">
                             <connections>
+                                <action selector="addTapped:" destination="4Aw-sv-ydH" id="NEo-Dh-LrI"/>
                                 <segue destination="PA3-gX-DCc" kind="presentation" id="U2U-M8-sdb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="add" destination="KtF-VB-LTT" id="TlX-XP-xUM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdq-VD-WWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="-108.39580209895054"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detail Cool Table View Controller-->
         <scene sceneID="xnr-6u-Bxv">
             <objects>
-                <tableViewController id="hJZ-1K-cfx" sceneMemberID="viewController">
+                <tableViewController id="hJZ-1K-cfx" customClass="DetailCoolTableViewController" customModule="CoolAs" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="JCN-OA-LqD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +85,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20J-R8-npz">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Human Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20J-R8-npz">
                                                     <rect key="frame" x="16" y="6" width="343" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -98,7 +102,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-8K-KnP">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sauce" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BbW-8K-KnP">
                                                     <rect key="frame" x="16" y="6" width="343" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
@@ -117,13 +121,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="l4m-AJ-gJj">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="60T-qq-BML"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9zd-60-cEV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="60T-qq-BML">
+                            <connections>
+                                <action selector="cancelTapped:" destination="hJZ-1K-cfx" id="YxT-He-K7W"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9zd-60-cEV">
+                            <connections>
+                                <action selector="saveTapped:" destination="hJZ-1K-cfx" id="zTf-Lf-53f"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancel" destination="60T-qq-BML" id="XSG-D9-osW"/>
+                        <outlet property="save" destination="9zd-60-cEV" id="P2N-Uz-xd5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqQ-OS-O34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320.8000000000002" y="-108.39580209895054"/>
+            <point key="canvasLocation" x="2169" y="-108"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BAh-sX-Jtz">
@@ -159,7 +175,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L04-nT-2pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1630" y="-108"/>
+            <point key="canvasLocation" x="1470" y="-108"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

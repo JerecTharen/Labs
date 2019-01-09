@@ -16,6 +16,9 @@
 		CB00902121E6581500B1C407 /* CoolAsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00902021E6581500B1C407 /* CoolAsUITests.swift */; };
 		CB00902F21E6586500B1C407 /* CoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00902E21E6586500B1C407 /* CoolTableViewController.swift */; };
 		CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */; };
+		CB00903321E65F5C00B1C407 /* CoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */; };
+		CB00908021E66DD400B1C407 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00907F21E66DD400B1C407 /* Entity.swift */; };
+		CB00908221E66F4800B1C407 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908121E66F4800B1C407 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		CB00902221E6581500B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB00902E21E6586500B1C407 /* CoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolTableViewController.swift; sourceTree = "<group>"; };
 		CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoolTableViewController.swift; sourceTree = "<group>"; };
+		CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolTableViewCell.swift; sourceTree = "<group>"; };
+		CB00907F21E66DD400B1C407 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		CB00908121E66F4800B1C407 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				CB00900121E6581300B1C407 /* Main.storyboard */,
 				CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */,
 				CB00902E21E6586500B1C407 /* CoolTableViewController.swift */,
+				CB00907F21E66DD400B1C407 /* Entity.swift */,
+				CB00908121E66F4800B1C407 /* PersistenceService.swift */,
+				CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */,
 				CB00900721E6581500B1C407 /* Assets.xcassets */,
 				CB00900921E6581500B1C407 /* LaunchScreen.storyboard */,
 				CB00900C21E6581500B1C407 /* Info.plist */,
@@ -262,7 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB00908221E66F4800B1C407 /* PersistenceService.swift in Sources */,
 				CB008FFE21E6581300B1C407 /* AppDelegate.swift in Sources */,
+				CB00903321E65F5C00B1C407 /* CoolTableViewCell.swift in Sources */,
+				CB00908021E66DD400B1C407 /* Entity.swift in Sources */,
 				CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */,
 				CB00902F21E6586500B1C407 /* CoolTableViewController.swift in Sources */,
 				CB00900621E6581300B1C407 /* CoolAs.xcdatamodeld in Sources */,

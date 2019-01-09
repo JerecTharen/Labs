@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
+        <attribute name="human" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sauce" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity2" inverseName="human" inverseEntity="Entity2" syncable="YES"/>
+    </entity>
+    <entity name="Entity2" representedClassName="Entity2" syncable="YES" codeGenerationType="class">
+        <attribute name="sauce" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="human" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Entity" inverseName="sauce" inverseEntity="Entity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entity" positionX="-45" positionY="0" width="128" height="73"/>
+        <element name="Entity2" positionX="165.33203125" positionY="38.98046875" width="128" height="73"/>
+    </elements>
 </model>
