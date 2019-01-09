@@ -29,12 +29,12 @@ class TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+       
         return entity.count
     }
     
@@ -45,11 +45,29 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editActionForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editButton = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
+            print("edit clicked \(indexPath.row)")
+        }
+       
+        let onject = Entity(context: PersistanceService.context)
+        PersistanceService.saveContext()
+        self.entity.append(onject)
+        self.tableView.reloadData()
+        return [editButton]
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             self.entity.remove(at: indexPath.row)
+            let onject = Entity(context: PersistanceService.context)
+            PersistanceService.saveContext()
+            self.entity.append(onject)
             self.tableView.reloadData()
+            return
         }
+     
     }
     
     @IBAction func onPlusTapped() {
@@ -73,5 +91,5 @@ class TableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
        
     }
-   
 }
+// future tyler make  save button u nib nard
