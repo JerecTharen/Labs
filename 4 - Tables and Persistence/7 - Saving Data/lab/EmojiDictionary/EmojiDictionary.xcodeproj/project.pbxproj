@@ -62,9 +62,9 @@
 			children = (
 				BE1C5B2A1E9577370072EB1E /* AppDelegate.swift */,
 				BE1C5B2C1E9577450072EB1E /* AddEditEmojiTableViewController.swift */,
-				BE1C5B2E1E9577500072EB1E /* Emoji.swift */,
-				BE1C5B2F1E9577500072EB1E /* EmojiTableViewCell.swift */,
 				BE1C5B301E9577500072EB1E /* EmojiTableViewController.swift */,
+				BE1C5B2F1E9577500072EB1E /* EmojiTableViewCell.swift */,
+				BE1C5B2E1E9577500072EB1E /* Emoji.swift */,
 				BE1C5B341E95776C0072EB1E /* LaunchScreen.storyboard */,
 				BE1C5B361E95776C0072EB1E /* Main.storyboard */,
 				BE1C5B3A1E9577790072EB1E /* Assets.xcassets */,

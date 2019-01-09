@@ -11,9 +11,6 @@ import UIKit
 class CoolTableViewController: UITableViewController {
     @IBOutlet weak var add: UIBarButtonItem!
     
-    
-   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +27,6 @@ class CoolTableViewController: UITableViewController {
         
         return 0
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

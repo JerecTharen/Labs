@@ -134,6 +134,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancel" destination="60T-qq-BML" id="XSG-D9-osW"/>
+                        <outlet property="humanOutlet" destination="20J-R8-npz" id="Wpq-ex-lp2"/>
+                        <outlet property="sauceOutlet" destination="BbW-8K-KnP" id="k66-Gf-YJ4"/>
                         <outlet property="save" destination="9zd-60-cEV" id="P2N-Uz-xd5"/>
                     </connections>
                 </tableViewController>

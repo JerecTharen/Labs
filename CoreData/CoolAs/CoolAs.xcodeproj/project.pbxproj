@@ -18,7 +18,10 @@
 		CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */; };
 		CB00903321E65F5C00B1C407 /* CoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */; };
 		CB00908021E66DD400B1C407 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00907F21E66DD400B1C407 /* Entity.swift */; };
-		CB00908221E66F4800B1C407 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908121E66F4800B1C407 /* PersistenceService.swift */; };
+		CB00908B21E6773F00B1C407 /* Entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908721E6773F00B1C407 /* Entity+CoreDataClass.swift */; };
+		CB00908C21E6773F00B1C407 /* Entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908821E6773F00B1C407 /* Entity+CoreDataProperties.swift */; };
+		CB00908D21E6773F00B1C407 /* Entity2+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908921E6773F00B1C407 /* Entity2+CoreDataClass.swift */; };
+		CB00908E21E6773F00B1C407 /* Entity2+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00908A21E6773F00B1C407 /* Entity2+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,10 @@
 		CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoolTableViewController.swift; sourceTree = "<group>"; };
 		CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolTableViewCell.swift; sourceTree = "<group>"; };
 		CB00907F21E66DD400B1C407 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
-		CB00908121E66F4800B1C407 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		CB00908721E6773F00B1C407 /* Entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataClass.swift"; path = "../Entity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB00908821E6773F00B1C407 /* Entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity+CoreDataProperties.swift"; path = "../Entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CB00908921E6773F00B1C407 /* Entity2+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity2+CoreDataClass.swift"; path = "../Entity2+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CB00908A21E6773F00B1C407 /* Entity2+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Entity2+CoreDataProperties.swift"; path = "../Entity2+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +113,15 @@
 		CB008FFC21E6581300B1C407 /* CoolAs */ = {
 			isa = PBXGroup;
 			children = (
+				CB00908721E6773F00B1C407 /* Entity+CoreDataClass.swift */,
+				CB00908821E6773F00B1C407 /* Entity+CoreDataProperties.swift */,
+				CB00908921E6773F00B1C407 /* Entity2+CoreDataClass.swift */,
+				CB00908A21E6773F00B1C407 /* Entity2+CoreDataProperties.swift */,
 				CB008FFD21E6581300B1C407 /* AppDelegate.swift */,
 				CB00900121E6581300B1C407 /* Main.storyboard */,
 				CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */,
 				CB00902E21E6586500B1C407 /* CoolTableViewController.swift */,
 				CB00907F21E66DD400B1C407 /* Entity.swift */,
-				CB00908121E66F4800B1C407 /* PersistenceService.swift */,
 				CB00903221E65F5C00B1C407 /* CoolTableViewCell.swift */,
 				CB00900721E6581500B1C407 /* Assets.xcassets */,
 				CB00900921E6581500B1C407 /* LaunchScreen.storyboard */,
@@ -271,12 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB00908221E66F4800B1C407 /* PersistenceService.swift in Sources */,
 				CB008FFE21E6581300B1C407 /* AppDelegate.swift in Sources */,
 				CB00903321E65F5C00B1C407 /* CoolTableViewCell.swift in Sources */,
+				CB00908D21E6773F00B1C407 /* Entity2+CoreDataClass.swift in Sources */,
+				CB00908C21E6773F00B1C407 /* Entity+CoreDataProperties.swift in Sources */,
 				CB00908021E66DD400B1C407 /* Entity.swift in Sources */,
+				CB00908E21E6773F00B1C407 /* Entity2+CoreDataProperties.swift in Sources */,
 				CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */,
 				CB00902F21E6586500B1C407 /* CoolTableViewController.swift in Sources */,
+				CB00908B21E6773F00B1C407 /* Entity+CoreDataClass.swift in Sources */,
 				CB00900621E6581300B1C407 /* CoolAs.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
