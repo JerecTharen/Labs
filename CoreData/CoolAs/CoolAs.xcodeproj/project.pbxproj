@@ -15,6 +15,7 @@
 		CB00901621E6581500B1C407 /* CoolAsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00901521E6581500B1C407 /* CoolAsTests.swift */; };
 		CB00902121E6581500B1C407 /* CoolAsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00902021E6581500B1C407 /* CoolAsUITests.swift */; };
 		CB00902F21E6586500B1C407 /* CoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00902E21E6586500B1C407 /* CoolTableViewController.swift */; };
+		CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CB00902021E6581500B1C407 /* CoolAsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolAsUITests.swift; sourceTree = "<group>"; };
 		CB00902221E6581500B1C407 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB00902E21E6586500B1C407 /* CoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolTableViewController.swift; sourceTree = "<group>"; };
+		CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoolTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				CB008FFD21E6581300B1C407 /* AppDelegate.swift */,
 				CB00900121E6581300B1C407 /* Main.storyboard */,
+				CB00903021E65BDC00B1C407 /* DetailCoolTableViewController.swift */,
 				CB00902E21E6586500B1C407 /* CoolTableViewController.swift */,
 				CB00900721E6581500B1C407 /* Assets.xcassets */,
 				CB00900921E6581500B1C407 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB008FFE21E6581300B1C407 /* AppDelegate.swift in Sources */,
+				CB00903121E65BDC00B1C407 /* DetailCoolTableViewController.swift in Sources */,
 				CB00902F21E6586500B1C407 /* CoolTableViewController.swift in Sources */,
 				CB00900621E6581300B1C407 /* CoolAs.xcdatamodeld in Sources */,
 			);
