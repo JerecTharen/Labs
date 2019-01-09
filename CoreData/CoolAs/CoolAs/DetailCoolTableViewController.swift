@@ -42,7 +42,16 @@ class DetailCoolTableViewController: UITableViewController {
         
     }
     @IBAction func saveTapped(_ sender: Any) {
+        let category = Entity(human: humanOutlet.text ?? "")
+        let category2 = Entity2(sauce: sauceOutlet.text ?? "")
         
+        do {
+            try category?.managedObjectContext?.save()
+            
+            self.navigationController?.popViewController(animated: true)
+        } catch {
+            print("could not save")
+        }
     }
     
 
