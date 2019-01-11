@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailCoolTableViewController: UITableViewController {
     @IBOutlet weak var save: UIBarButtonItem!
@@ -15,8 +16,23 @@ class DetailCoolTableViewController: UITableViewController {
     @IBOutlet weak var sauceOutlet: UITextField!
     
     
+    var entities: [Entity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Entity> = Entity.fetchRequest()
+        
+        do {
+            entities = try managedContext.fetch(fetchRequest)
+            self.tableView.reloadData()
+        } catch {}
+        
 
     }
 
@@ -24,34 +40,44 @@ class DetailCoolTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
  
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return 2
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        return cell
-    }
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "addHumans", for: indexPath)
+//
+//        return cell
+//    }
     @IBAction func cancelTapped(_ sender: Any) {
         
     }
     @IBAction func saveTapped(_ sender: Any) {
-        let category = Entity(human: humanOutlet.text ?? "")
-        let category2 = Entity2(sauce: sauceOutlet.text ?? "")
+        let newHuman = humanOutlet.text ?? ""
+        let newSauce = sauceOutlet.text ?? ""
         
-        do {
-            try category?.managedObjectContext?.save()
+        if let tasteyHuman = Entity(human: "bob") {
             
-            self.navigationController?.popViewController(animated: true)
-        } catch {
-            print("could not save")
+            
         }
+        
+        
+        
+//        let category = Entity(human: humanOutlet.text ?? "")
+//        let category2 = Entity2(sauce: sauceOutlet.text ?? "")
+//
+//        do {
+//            try category?.managedObjectContext?.save()
+//
+//            self.navigationController?.popViewController(animated: true)
+//        } catch {
+//            print("could not save")
+//        }
     }
     
 

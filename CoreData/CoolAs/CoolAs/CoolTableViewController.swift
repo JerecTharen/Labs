@@ -43,13 +43,23 @@ class CoolTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "addHumans", for: indexPath)
 
         return cell
         
     }
     @IBAction func addTapped(_ sender: Any) {
+        performSegue(withIdentifier: "addHumans", sender: self)
         
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DetailCoolTableViewController else {
+            return
+        }
+        
+        destination.entities = entity
     }
     
 

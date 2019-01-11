@@ -55,7 +55,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KtF-VB-LTT">
                             <connections>
                                 <action selector="addTapped:" destination="4Aw-sv-ydH" id="NEo-Dh-LrI"/>
-                                <segue destination="PA3-gX-DCc" kind="presentation" id="U2U-M8-sdb"/>
+                                <segue destination="PA3-gX-DCc" kind="presentation" identifier="addHumans" id="U2U-M8-sdb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -181,6 +181,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6FT-pZ-MMH"/>
+        <segue reference="U2U-M8-sdb"/>
     </inferredMetricsTieBreakers>
 </document>
