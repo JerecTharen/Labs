@@ -38,13 +38,28 @@ class SearchRepTableViewController: UITableViewController, UISearchBarDelegate {
         // #warning Incomplete implementation, return the number of rows
         return representatives.count
     }
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepCell", for: indexPath) as? RepTableViewCell else { return UITableViewCell() }
+        
+        let rep = representatives[indexPath.row]
+        
+        cell.updateCell(rep: rep)
         
         
         
         return cell
     }
- 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let rep = representatives[indexPath.row]
+        RepresentativeController.sharedController.saveRep(rep: rep)
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
 }
