@@ -40,25 +40,15 @@ class CoreDataTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let team = TeamController.sharedController.team[indexPath.row]
         if editingStyle == .delete {
             // Delete the row from the data source
+            TeamController.sharedController.delete(team: team)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -75,14 +65,26 @@ class CoreDataTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailView" {
+            //get the detailVC
+            guard let  detailVC = segue.destination as? DetailCoreDataTableViewController,
+                let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
+            
+            // we have more data
+            let team = TeamController.sharedController.team[selectedRow]
+            
+            //give it stuff
+            detailVC.team = team
+            
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
