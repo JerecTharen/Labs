@@ -1,8 +1,8 @@
 //
 //  NetworkController.swift
-//  RepresentativeAPI
+//  slackShakeJack
 //
-//  Created by Tyler Donohue on 1/14/19.
+//  Created by Tyler Donohue on 1/17/19.
 //  Copyright © 2019 Tyler Donohue. All rights reserved.
 //
 
