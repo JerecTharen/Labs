@@ -66,7 +66,7 @@ class CardController {
             try Stack.context.save()
         } catch {
             Stack.context.rollback()
-            print("Save failed: \(error)")
+            print("save failed: \(error)")
         }
     }
     

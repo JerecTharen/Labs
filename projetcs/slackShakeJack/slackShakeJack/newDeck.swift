@@ -14,7 +14,7 @@ class NewDeck: NSManagedObject, Decodable {
     @NSManaged var entity_id: String
     @NSManaged var cards: NSSet?
     
-    static var entityName: String { return "Deck" }
+    static var entityName: String { return "NewDeck" }
     
     enum CodingKeys: String, CodingKey {
         case entity_id = "deck_id"

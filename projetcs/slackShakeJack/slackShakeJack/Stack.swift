@@ -11,7 +11,7 @@ import CoreData
 
 enum Stack {
     static var context: NSManagedObjectContext = {
-        let container = NSPersistentContainer(name: "Model")
+        let container = NSPersistentContainer(name: "slackShakeJack")
         container.loadPersistentStores(completionHandler: { (description, error) in
             if let error = error {
                 fatalError()
