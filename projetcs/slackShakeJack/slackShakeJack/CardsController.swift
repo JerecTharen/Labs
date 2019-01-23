@@ -7,3 +7,100 @@
 //
 
 import Foundation
+import CoreData
+
+class CardController {
+    
+    static var sharedController = CardController()
+    
+    private var deck: NewDeck?
+    private var score: Int = 0
+    //static var sharedController = CardController()
+    
+    private func createNewDeck(completion: ((NewDeck?) -> Void)? = nil) {
+        guard let url = URL(string: "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1") else {
+            print("Bad URL")
+            return
+        }
+        
+        NetworkController.performNetworkRequest(for: url) { (data, error) in
+            guard let data = data else { return }
+            
+            let decoder = JSONDecoder()
+            var results: NewDeck?
+            
+            if let deck = try? decoder.decode(NewDeck.self, from: data) {
+                results = deck
+            }
+            
+            if let completion = completion {
+                completion(results)
+            }
+        }
+    }
+    
+    func drawCard() {
+        guard let deck = deck, let url = URL(string: "https://deckofcardsapi.com/api/deck/\(deck.entity_id)/draw/?count=1") else {
+            print("you got a bad URL in me")
+            return
+        }
+        
+        NetworkController.performNetworkRequest(for: url) { (data, error) in
+            do {
+                guard let data = data else { return }
+                
+                let decoder = JSONDecoder()
+                
+                let cards = try decoder.decode(Cards.self, from: data)
+                deck.cards = NSSet(array: cards.cards)
+            } catch {
+                print(error)
+            }
+            self.saveToPersistentStorage()
+            
+        }
+    }
+    
+    private func saveToPersistentStorage() {
+        do {
+            try Stack.context.save()
+        } catch {
+            Stack.context.rollback()
+            print("Save failed: \(error)")
+        }
+    }
+    
+    func setDeck() {
+        let deckFetchRequest = NSFetchRequest<NewDeck>(entityName: NewDeck.entityName)
+        
+        do {
+            if let coreDataDeck = try Stack.context.fetch(deckFetchRequest).first {
+                deck = coreDataDeck
+            } else {
+                createNewDeck { (deck) in
+                    guard let unwrappedDeck = deck else { return }
+                    self.deck = unwrappedDeck
+                    self.saveToPersistentStorage()
+                }
+            }
+        } catch {
+            print("unable to fetch data from context")
+        }
+    }
+    func getDeck() -> NewDeck {
+        guard let deck = deck else { fatalError() }
+        return deck
+    }
+    
+    func setScore() {
+        if (CardController.sharedController.deck?.cards?.allObjects.last as! Card).value == "JACK" {
+            score += 1
+        } else {
+            score -= 1
+        }
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+}
