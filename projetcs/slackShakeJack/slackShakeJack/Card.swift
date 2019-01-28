@@ -44,5 +44,3 @@ struct Cards: Decodable {
     let cards: [Card]
 }
 
-
-

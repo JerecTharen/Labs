@@ -9,22 +9,38 @@
 import UIKit
 
 class RepViewController: UIViewController {
-
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phoneNumber: UILabel!
+    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var searchButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        updateView()
     }
-    */
+    
 
+    var representaive: Representative? {
+        return RepresentativeController.sharedController.representatives.first
+    }
+    
+    func updateView() {
+        if let rep = representaive {
+            name.text = rep.name
+            adress.text = rep.adress
+            phoneNumber.text = rep.phoneNumber
+        } else {
+            name.text = "Search for Rep"
+            adress.text = "Search for Adress"
+            phoneNumber.text = "Search for Phone Number"
+            
+        }
+    }
 }
