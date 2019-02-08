@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBABC9A221FF5FB900C1F831 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBABC9A121FF5FB900C1F831 /* AppDelegate.swift */; };
+		CBABC9A421FF5FB900C1F831 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBABC9A321FF5FB900C1F831 /* ViewController.swift */; };
+		CBABC9A721FF5FB900C1F831 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBABC9A521FF5FB900C1F831 /* Main.storyboard */; };
+		CBABC9AA21FF5FB900C1F831 /* austinsoundalaram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBABC9A821FF5FB900C1F831 /* austinsoundalaram.xcdatamodeld */; };
+		CBABC9AC21FF5FBA00C1F831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBABC9AB21FF5FBA00C1F831 /* Assets.xcassets */; };
+		CBABC9AF21FF5FBA00C1F831 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBABC9AD21FF5FBA00C1F831 /* LaunchScreen.storyboard */; };
+		CBABC9BA21FF5FBA00C1F831 /* austinsoundalaramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBABC9B921FF5FBA00C1F831 /* austinsoundalaramTests.swift */; };
+		CBABC9C521FF5FBA00C1F831 /* austinsoundalaramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBABC9C421FF5FBA00C1F831 /* austinsoundalaramUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBABC9B621FF5FBA00C1F831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBABC99621FF5FB900C1F831 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBABC99D21FF5FB900C1F831;
+			remoteInfo = austinsoundalaram;
+		};
+		CBABC9C121FF5FBA00C1F831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBABC99621FF5FB900C1F831 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBABC99D21FF5FB900C1F831;
+			remoteInfo = austinsoundalaram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBABC99E21FF5FB900C1F831 /* austinsoundalaram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = austinsoundalaram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBABC9A121FF5FB900C1F831 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBABC9A321FF5FB900C1F831 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CBABC9A621FF5FB900C1F831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CBABC9A921FF5FB900C1F831 /* austinsoundalaram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = austinsoundalaram.xcdatamodel; sourceTree = "<group>"; };
+		CBABC9AB21FF5FBA00C1F831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBABC9AE21FF5FBA00C1F831 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CBABC9B021FF5FBA00C1F831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBABC9B521FF5FBA00C1F831 /* austinsoundalaramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = austinsoundalaramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBABC9B921FF5FBA00C1F831 /* austinsoundalaramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = austinsoundalaramTests.swift; sourceTree = "<group>"; };
+		CBABC9BB21FF5FBA00C1F831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBABC9C021FF5FBA00C1F831 /* austinsoundalaramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = austinsoundalaramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBABC9C421FF5FBA00C1F831 /* austinsoundalaramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = austinsoundalaramUITests.swift; sourceTree = "<group>"; };
+		CBABC9C621FF5FBA00C1F831 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBABC99B21FF5FB900C1F831 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9B221FF5FBA00C1F831 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9BD21FF5FBA00C1F831 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBABC99521FF5FB900C1F831 = {
+			isa = PBXGroup;
+			children = (
+				CBABC9A021FF5FB900C1F831 /* austinsoundalaram */,
+				CBABC9B821FF5FBA00C1F831 /* austinsoundalaramTests */,
+				CBABC9C321FF5FBA00C1F831 /* austinsoundalaramUITests */,
+				CBABC99F21FF5FB900C1F831 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBABC99F21FF5FB900C1F831 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBABC99E21FF5FB900C1F831 /* austinsoundalaram.app */,
+				CBABC9B521FF5FBA00C1F831 /* austinsoundalaramTests.xctest */,
+				CBABC9C021FF5FBA00C1F831 /* austinsoundalaramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBABC9A021FF5FB900C1F831 /* austinsoundalaram */ = {
+			isa = PBXGroup;
+			children = (
+				CBABC9A121FF5FB900C1F831 /* AppDelegate.swift */,
+				CBABC9A321FF5FB900C1F831 /* ViewController.swift */,
+				CBABC9A521FF5FB900C1F831 /* Main.storyboard */,
+				CBABC9AB21FF5FBA00C1F831 /* Assets.xcassets */,
+				CBABC9AD21FF5FBA00C1F831 /* LaunchScreen.storyboard */,
+				CBABC9B021FF5FBA00C1F831 /* Info.plist */,
+				CBABC9A821FF5FB900C1F831 /* austinsoundalaram.xcdatamodeld */,
+			);
+			path = austinsoundalaram;
+			sourceTree = "<group>";
+		};
+		CBABC9B821FF5FBA00C1F831 /* austinsoundalaramTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBABC9B921FF5FBA00C1F831 /* austinsoundalaramTests.swift */,
+				CBABC9BB21FF5FBA00C1F831 /* Info.plist */,
+			);
+			path = austinsoundalaramTests;
+			sourceTree = "<group>";
+		};
+		CBABC9C321FF5FBA00C1F831 /* austinsoundalaramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CBABC9C421FF5FBA00C1F831 /* austinsoundalaramUITests.swift */,
+				CBABC9C621FF5FBA00C1F831 /* Info.plist */,
+			);
+			path = austinsoundalaramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBABC99D21FF5FB900C1F831 /* austinsoundalaram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBABC9C921FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaram" */;
+			buildPhases = (
+				CBABC99A21FF5FB900C1F831 /* Sources */,
+				CBABC99B21FF5FB900C1F831 /* Frameworks */,
+				CBABC99C21FF5FB900C1F831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = austinsoundalaram;
+			productName = austinsoundalaram;
+			productReference = CBABC99E21FF5FB900C1F831 /* austinsoundalaram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CBABC9B421FF5FBA00C1F831 /* austinsoundalaramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBABC9CC21FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaramTests" */;
+			buildPhases = (
+				CBABC9B121FF5FBA00C1F831 /* Sources */,
+				CBABC9B221FF5FBA00C1F831 /* Frameworks */,
+				CBABC9B321FF5FBA00C1F831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBABC9B721FF5FBA00C1F831 /* PBXTargetDependency */,
+			);
+			name = austinsoundalaramTests;
+			productName = austinsoundalaramTests;
+			productReference = CBABC9B521FF5FBA00C1F831 /* austinsoundalaramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBABC9BF21FF5FBA00C1F831 /* austinsoundalaramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBABC9CF21FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaramUITests" */;
+			buildPhases = (
+				CBABC9BC21FF5FBA00C1F831 /* Sources */,
+				CBABC9BD21FF5FBA00C1F831 /* Frameworks */,
+				CBABC9BE21FF5FBA00C1F831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBABC9C221FF5FBA00C1F831 /* PBXTargetDependency */,
+			);
+			name = austinsoundalaramUITests;
+			productName = austinsoundalaramUITests;
+			productReference = CBABC9C021FF5FBA00C1F831 /* austinsoundalaramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBABC99621FF5FB900C1F831 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tyler Donohue";
+				TargetAttributes = {
+					CBABC99D21FF5FB900C1F831 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CBABC9B421FF5FBA00C1F831 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CBABC99D21FF5FB900C1F831;
+					};
+					CBABC9BF21FF5FBA00C1F831 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CBABC99D21FF5FB900C1F831;
+					};
+				};
+			};
+			buildConfigurationList = CBABC99921FF5FB900C1F831 /* Build configuration list for PBXProject "austinsoundalaram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CBABC99521FF5FB900C1F831;
+			productRefGroup = CBABC99F21FF5FB900C1F831 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBABC99D21FF5FB900C1F831 /* austinsoundalaram */,
+				CBABC9B421FF5FBA00C1F831 /* austinsoundalaramTests */,
+				CBABC9BF21FF5FBA00C1F831 /* austinsoundalaramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBABC99C21FF5FB900C1F831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBABC9AF21FF5FBA00C1F831 /* LaunchScreen.storyboard in Resources */,
+				CBABC9AC21FF5FBA00C1F831 /* Assets.xcassets in Resources */,
+				CBABC9A721FF5FB900C1F831 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9B321FF5FBA00C1F831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9BE21FF5FBA00C1F831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBABC99A21FF5FB900C1F831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBABC9AA21FF5FB900C1F831 /* austinsoundalaram.xcdatamodeld in Sources */,
+				CBABC9A421FF5FB900C1F831 /* ViewController.swift in Sources */,
+				CBABC9A221FF5FB900C1F831 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9B121FF5FBA00C1F831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBABC9BA21FF5FBA00C1F831 /* austinsoundalaramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBABC9BC21FF5FBA00C1F831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBABC9C521FF5FBA00C1F831 /* austinsoundalaramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBABC9B721FF5FBA00C1F831 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBABC99D21FF5FB900C1F831 /* austinsoundalaram */;
+			targetProxy = CBABC9B621FF5FBA00C1F831 /* PBXContainerItemProxy */;
+		};
+		CBABC9C221FF5FBA00C1F831 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBABC99D21FF5FB900C1F831 /* austinsoundalaram */;
+			targetProxy = CBABC9C121FF5FBA00C1F831 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CBABC9A521FF5FB900C1F831 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBABC9A621FF5FB900C1F831 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CBABC9AD21FF5FBA00C1F831 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBABC9AE21FF5FBA00C1F831 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBABC9C721FF5FBA00C1F831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CBABC9C821FF5FBA00C1F831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CBABC9CA21FF5FBA00C1F831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CBABC9CB21FF5FBA00C1F831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBABC9CD21FF5FBA00C1F831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/austinsoundalaram.app/austinsoundalaram";
+			};
+			name = Debug;
+		};
+		CBABC9CE21FF5FBA00C1F831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/austinsoundalaram.app/austinsoundalaram";
+			};
+			name = Release;
+		};
+		CBABC9D021FF5FBA00C1F831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = austinsoundalaram;
+			};
+			name = Debug;
+		};
+		CBABC9D121FF5FBA00C1F831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = austinsoundalaramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = TyDon.austinsoundalaramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = austinsoundalaram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBABC99921FF5FB900C1F831 /* Build configuration list for PBXProject "austinsoundalaram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBABC9C721FF5FBA00C1F831 /* Debug */,
+				CBABC9C821FF5FBA00C1F831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBABC9C921FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBABC9CA21FF5FBA00C1F831 /* Debug */,
+				CBABC9CB21FF5FBA00C1F831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBABC9CC21FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBABC9CD21FF5FBA00C1F831 /* Debug */,
+				CBABC9CE21FF5FBA00C1F831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBABC9CF21FF5FBA00C1F831 /* Build configuration list for PBXNativeTarget "austinsoundalaramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBABC9D021FF5FBA00C1F831 /* Debug */,
+				CBABC9D121FF5FBA00C1F831 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CBABC9A821FF5FB900C1F831 /* austinsoundalaram.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBABC9A921FF5FB900C1F831 /* austinsoundalaram.xcdatamodel */,
+			);
+			currentVersion = CBABC9A921FF5FB900C1F831 /* austinsoundalaram.xcdatamodel */;
+			path = austinsoundalaram.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CBABC99621FF5FB900C1F831 /* Project object */;
+}

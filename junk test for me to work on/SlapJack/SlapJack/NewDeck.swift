@@ -9,29 +9,17 @@
 import Foundation
 import CoreData
 
-extension NewDeck {
-    convenience init?(_ context: NSManagedObjectContext, json:[[String: Any]]) {
-        self.init(context: context)
-        var cards:[Cards] = []
-        for dict in json {
-            if let card = Cards.init(context, json: dict) {
-                cards.append(card)
-            }
-        }
-        self.cards = NSMutableOrderedSet.init(array: cards)
-        
-    }
+struct Deck: Decodable {
+    let shuffled: Bool
+    let success: Bool
+    let remaining: Int
+    let deckId: String
     
-    func drawCard()->Cards? {
-        guard let card = cards?.firstObject as? Cards else {
-            return nil
-        }
-        let mutableCards = cards?.mutableCopy() as! NSMutableOrderedSet
-        mutableCards.removeObject(at: 0)
-        cards = mutableCards
-        self.currentCard = card
-        return card
+    init(shuffled: Bool, success: Bool, remaining: Int, deckId: String) {
+        self.shuffled = shuffled
+        self.success = success
+        self.remaining = remaining
+        self.deckId = deckId
     }
-    
     
 }

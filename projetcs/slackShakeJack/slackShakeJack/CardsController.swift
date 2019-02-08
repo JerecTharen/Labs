@@ -66,7 +66,7 @@ class CardController {
                 
                 let decoder = JSONDecoder()
                 
-                let results = try decoder.decode(
+                let results = try decoder.decode()
                 
                 completion(results.cards.first)
             } catch {

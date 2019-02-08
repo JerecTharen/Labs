@@ -35,3 +35,5 @@ class NewDeck: NSManagedObject, Decodable {
         }
     }
 }
+
+

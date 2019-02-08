@@ -9,14 +9,18 @@
 import Foundation
 import CoreData
 
-extension Cards {
-    convenience init?(_ context: NSManagedObjectContext, json:[String: Any]) {
-        self.init(context: context)
-        guard let image = json["image"] as? String, let value = json["value"] as? String, let suit = json["suit"] as? String else {
-            return nil
-        }
+struct Card: Decodable {
+    let imageURL: String
+    let value: String
+    let suit: String
+    let code: String
+    let wasSlapped: Bool
+    
+    init(image: String, value: String, suit: String, code: String, wasSlapped: Bool) {
         self.imageURL = image
         self.value = value
         self.suit = suit
+        self.code = code
+        self.wasSlapped = wasSlapped
     }
 }

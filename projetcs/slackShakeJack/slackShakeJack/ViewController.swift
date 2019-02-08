@@ -65,7 +65,7 @@ class ViewController: UIViewController {
     }
     @IBAction func cardButtonTapped(_ sender: Any) {
         //sender.isEnabled = false
-        CardController.sharedController.drawCard()
+        CardController.sharedController.drawCard(completion: <#((Card?) -> Void)#>)
         displayNewCard()
         score.text = "Score: 0"
         numberOfCards.text = "Cards: 52"
@@ -85,3 +85,4 @@ class ViewController: UIViewController {
     }
     
 }
+
