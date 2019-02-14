@@ -21,7 +21,6 @@ class GameTableViewController: UITableViewController {
     
     var person: Person?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
@@ -43,6 +42,7 @@ class GameTableViewController: UITableViewController {
         person = Person(name: name, score: 0)
         performSegue(withIdentifier: Unwind.unwind, sender: self)
     }
+    
     @IBAction func stepperButtonTapped(_ sender: UIStepper) {
         scoreLabelOutlet.text = String(sender.value)
     }
