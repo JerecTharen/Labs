@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>395894475008-frhq4m1hon37ug9u8647oodqktsunl4i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.395894475008-frhq4m1hon37ug9u8647oodqktsunl4i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC5AsJw0EQirUALBwBVtq-Mn21ibW0ruLw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>395894475008</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.TyDon.TableTopMeetUp</string>
+	<key>PROJECT_ID</key>
+	<string>partyup-46c65</string>
+	<key>STORAGE_BUCKET</key>
+	<string>partyup-46c65.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:395894475008:ios:60dfa3493d706c08</string>
+	<key>DATABASE_URL</key>
+	<string>https://partyup-46c65.firebaseio.com</string>
+</dict>
+</plist>
