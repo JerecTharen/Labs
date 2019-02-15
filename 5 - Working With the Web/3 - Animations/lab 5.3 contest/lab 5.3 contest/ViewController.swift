@@ -33,7 +33,6 @@ class ViewController: UIViewController {
             UIView.animate(withDuration: 0.2) {
                 self.freeCorn.backgroundColor = .green
                 
-                
             }
         }
     }
