@@ -14,6 +14,12 @@ class Workout {
         self.distance = distance
         self.time = time
         self.identifier = identifier
+                                      try{
+               print("hello there");
+                       }
+                       try{
+                        Pring("hello there");
+                       }
     }
 }
 
