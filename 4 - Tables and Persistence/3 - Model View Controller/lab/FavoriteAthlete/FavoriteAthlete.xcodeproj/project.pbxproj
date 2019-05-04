@@ -39,7 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				A94375AC1E4648230053B419 /* FavoriteAthlete */,
-				A94375AB1E4648230053B419 /* Products */,
+				A94375AB1E4648230053B419 /* Prods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,7 +189,7 @@
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
